@@ -1,0 +1,35 @@
+chore: finish styling statusline
+feature: lsp based formatting
+feature: none ls for linting diagnostics and code actions, fallback
+formatting if no lsps that provide it are available
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   lua/config/autocmds.lua
+#	modified:   lua/config/highlights.lua
+#	modified:   lua/config/init.lua
+#	modified:   lua/config/keymaps.lua
+#	modified:   lua/config/options.lua
+#	modified:   lua/core/lazy.lua
+#	modified:   lua/core/lsp.lua
+#	deleted:    lua/kickstart/plugins/neo-tree.lua
+#	new file:   lua/plugins/editor/treesitter.lua
+#	modified:   lua/plugins/gitsigns.lua
+#	modified:   lua/plugins/guess-indent.lua
+#	modified:   lua/plugins/lsp/blink.lua
+#	modified:   lua/plugins/lsp/conform.lua
+#	modified:   lua/plugins/lsp/lspconfig.lua
+#	new file:   lua/plugins/lsp/none-ls.lua
+#	deleted:    lua/plugins/lsp/treesitter.lua
+#	modified:   lua/plugins/ui/lualine.lua
+#	deleted:    lua/plugins/ui/nvim-web-devicons.lua
+#	modified:   lua/plugins/ui/oil.lua
+#	modified:   lua/plugins/which-key.lua
+#	new file:   neovim.yml
+#	new file:   selene.toml
+#

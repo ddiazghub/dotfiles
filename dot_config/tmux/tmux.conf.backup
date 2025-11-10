@@ -1,0 +1,120 @@
+#  _                                          __
+# | |_ _ __ ___  _   ___  __  ___ ___  _ __  / _|
+# | __| '_ ` _ \| | | \ \/ / / __/ _ \| '_ \| |_
+# | |_| | | | | | |_| |>  < | (_| (_) | | | |  _|
+#  \__|_| |_| |_|\__,_/_/\_(_)___\___/|_| |_|_|
+#
+ 
+# tmux theme
+source-file "${HOME}/.config/tmux/tmuxtheme.conf"
+
+# tmux nvim navigation
+source-file "${HOME}/.config/tmux/tmuxnvim.conf"
+ 
+set -g default-shell "/bin/fish"
+ 
+#set -g default-terminal "tmux-256color"
+#set -g default-terminal "xterm-256color"
+set -s default-terminal "screen-256color"
+ 
+### Ctrl+b is too emacs like ;)
+unbind C-b
+
+#set -g prefix C-a
+#bind C-a send-prefix
+set -g prefix C-Space
+bind C-Space send-prefix
+
+#set -g prefix2 C-a
+#bind C-a send-prefix -2
+ 
+# PREFIX for nested session (i.e. over ssh)
+# can't seem to get C-a to work here? (is the shell catching it?)
+#bind C-b send-prefix
+ 
+# More friendly split pane
+# bind \ split-window -h -c '#{pane_current_path}'
+bind \\ split-window -h -c '#{pane_current_path}' # tmux 3.0+ needs '\' char escaped
+bind - split-window -v -c '#{pane_current_path}'
+ 
+# Vim style bindings
+setw -g mode-keys vi
+
+# Emacs key bindings in tmux command prompt (prefix + :) are better than
+# vi keys, even for vim users
+set -g status-keys emacs
+ 
+# y and p as in vim
+#bind Escape copy-mode
+unbind p
+bind p paste-buffer
+bind -T copy-mode-vi 'v' send -X begin-selection
+bind -T copy-mode-vi 'y' send -X copy-selection
+ 
+# moving between panes with vim movement keys
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+# Overrides last-window command
+bind l select-pane -R
+ 
+# new last-window command
+bind p last-window
+bind o last-window # old habits die hard
+ 
+# moving between windows with vim movement keys
+bind -r C-h select-window -t :-
+bind -r C-l select-window -t :+
+bind -r C-p select-window -t :-
+bind -r C-n select-window -t :+
+ 
+# resize panes with vim movement keys
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+# pressing `prefix + prefix` sends <prefix> to the shell
+# bind C-space send-prefix
+
+# `Ctrl-space + space` switches between alternate windows.
+bind space last-window
+ 
+# Set the command sending delay to 0. Makes everything more responsive and
+### longer delays may interfere with command line tools like vim
+set -sg escape-time 0
+
+### Increase scrollback buffer size
+set -g history-limit 99999
+ 
+# Status update interval
+set -g status-interval 1
+ 
+# Timeout for display messages (in milliseconds)
+set -g display-time 2000
+ 
+# Mouse works as expected (maybe?)
+#set -g mouse on
+
+setw -g aggressive-resize on
+ 
+# synchronize panes toggle
+bind C-s setw synchronize-panes
+ 
+# cycle through sessions
+#bind C-9 switch-client -p
+#bind C-0 switch-client -n
+ 
+# Turn off automatic window renaming
+### Auto-rename is supposed to be disabled when manually
+### naming or renaming window name, but doesn't seem to work
+### correctly on all versions of tmux.
+#setw -g automatic-rename off
+ 
+# Binding to reload config file
+bind r source-file ~/.config/tmux/tmux.conf \; display-message "Config reloaded!"
+
+bind y display-popup -w 102% -h 70% -E 'tmux list-keys | sort | sed -E "s/^bind-key[[:space:]]+-T[[:space:]]+[[:alnum:]_-]+[[:space:]]*//" | cut -c-(tput cols) | fzf -e -i --prompt="tmux hotkeys: " --info=inline --layout=reverse --scroll-off=5 --tiebreak=index --header "prefix=yes-prefix root=no-prefix"'
+
+# for git gutter support in vim
+# set -g focus-events on

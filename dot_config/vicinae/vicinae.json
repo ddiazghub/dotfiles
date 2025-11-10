@@ -1,0 +1,22 @@
+{
+    "closeOnFocusLoss": true,
+    "faviconService": "twenty",
+    "font": {
+        "size": 10
+    },
+    "keybinding": "default",
+    "keybinds": {
+    },
+    "popToRootOnClose": true,
+    "rootSearch": {
+        "searchFiles": false
+    },
+    "theme": {
+        "name": "rosepine-base.json"
+    },
+    "window": {
+        "csd": true,
+        "opacity": 0.6,
+        "rounding": 10
+    }
+}
