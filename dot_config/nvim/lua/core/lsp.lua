@@ -21,6 +21,10 @@ vim.lsp.enable { -- Hyprland
 
   -- GraphQL
   'graphql',
+
+  -- Shell
+  'bashls',
+  'fish_lsp',
 }
 
 -- Diagnostic Config
