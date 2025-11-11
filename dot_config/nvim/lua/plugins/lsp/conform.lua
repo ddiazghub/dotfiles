@@ -30,14 +30,45 @@ return {
   'stevearc/conform.nvim',
   event = { 'BufWritePre' },
   cmd = { 'ConformInfo' },
+  ---@module 'conform'
+  ---@type conform.setupOpts
   opts = {
     notify_on_error = true,
     format_on_save = function(bufnr)
-      -- Disable "format_on_save lsp_fallback" for languages that don't
-      -- have a well standardized coding style. You can add additional
-      -- languages here or re-enable it for the disabled ones.
-      local disable_filetypes = { c = true, cpp = true }
-      if disable_filetypes[vim.bo[bufnr].filetype] then
+      local exclude = {
+        filetypes = { 'c', 'cpp' },
+        projects = {
+          '~/dev/annise',
+        },
+      }
+
+      local is_excluded_ft = false
+      local is_excluded_project = false
+
+      -- Check for excluded filetypes
+      for i, ft in ipairs(exclude.filetypes) do
+        if vim.bo[bufnr].filetype == ft then
+          is_excluded_ft = true
+          break
+        end
+      end
+
+      -- Check for excluded projects
+      for i, project in ipairs(exclude.projects) do
+        local path = project:gsub('~', vim.env.HOME):gsub('*', ''):gsub('//', '/')
+        local name = vim.api.nvim_buf_get_name(bufnr)
+        dd(path)
+        dd(name)
+
+        if vim.startswith(name, path) then
+          is_excluded_project = true
+          break
+        end
+      end
+
+      dd(is_excluded_project)
+
+      if is_excluded_ft or is_excluded_project then
         return nil
       else
         return {
