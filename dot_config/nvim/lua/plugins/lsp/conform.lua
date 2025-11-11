@@ -57,16 +57,12 @@ return {
       for i, project in ipairs(exclude.projects) do
         local path = project:gsub('~', vim.env.HOME):gsub('*', ''):gsub('//', '/')
         local name = vim.api.nvim_buf_get_name(bufnr)
-        dd(path)
-        dd(name)
 
         if vim.startswith(name, path) then
           is_excluded_project = true
           break
         end
       end
-
-      dd(is_excluded_project)
 
       if is_excluded_ft or is_excluded_project then
         return nil
