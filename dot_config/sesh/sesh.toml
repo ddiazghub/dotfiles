@@ -1,0 +1,82 @@
+# _      _                  _
+#  ___  ___  ___| |__  | |_ ___  _ __ ___ | |
+# / __|/ _ \/ __| '_ \ | __/ _ \| '_ ` _ \| |
+# \__ \  __/\__ \ | | || || (_) | | | | | | |
+# |___/\___||___/_| |_(_)__\___/|_| |_| |_|_|
+
+[[session]]
+name = "hyperland config"
+path = "~/.local/share/chezmoi/dot_config/hypr"
+startup_command = "nvim hyprland.conf"
+preview_command = "bat --color=always ~/.local/share/chezmoi/dot_config/hypr/hyprland.conf"
+windows = ["git"]
+
+[[session]]
+name = "tmux config"
+path = "~/.local/share/chezmoi/dot_config/tmux"
+startup_command = "nvim tmux.conf"
+preview_command = "bat --color=always ~/.local/share/chezmoi/dot_config/tmux/tmux.conf"
+windows = ["git"]
+
+[[session]]
+name = "obsidian vault"
+path = "~/Documents/Obsidian Vault/"
+startup_command = "nvim ."
+preview_command = "exa -lh --icons --color=always '~/Documents/Obsidian Vault'"
+windows = ["git"]
+
+[[session]]
+name = "fish config"
+path = "~/.local/share/chezmoi/dot_config/private_fish"
+startup_command = "nvim config.fish"
+preview_command = "bat --color=always ~/.local/share/chezmoi/dot_config/private_fish/config.fish"
+windows = ["git"]
+
+[[session]]
+name = "sesh config"
+path = "~/.local/share/chezmoi/dot_config/sesh"
+startup_command = "nvim sesh.toml"
+preview_command = "bat --color=always ~/.local/share/chezmoi/dot_config/sesh/sesh.toml"
+windows = ["git"]
+
+[[session]]
+name = "starship config"
+path = "~/.local/share/chezmoi/dot_config"
+startup_command = "nvim starship.toml"
+preview_command = "bat --color=always ~/.local/share/chezmoi/dot_config/starship.toml"
+windows = ["git"]
+
+[[session]]
+name = "waybar config"
+path = "~/.local/share/chezmoi/dot_config/waybar"
+startup_command = "nvim config.jsonc"
+preview_command = "bat --color=always ~/.local/share/chezmoi/dot_config/waybar/config.jsonc"
+windows = ["git"]
+
+[[session]]
+name = "nvim config"
+path = "~/.local/share/chezmoi/dot_config/nvim"
+startup_command = "nvim ."
+preview_command = "exa -lh --icons --color=always ~/.local/share/chezmoi/dot_config/nvim"
+windows = ["git"]
+
+[[session]]
+name = "annise backend"
+path = "~/dev/annise/annise-backend"
+startup_command = "nvim ."
+preview_command = "exa -lh --icons --color=always ~/dev/annise/annise-backend"
+windows = ["git bla"]
+
+[[session]]
+name = "annise lambdas"
+path = "~/dev/annise/annise-lambda-exec/"
+startup_command = "npm run dev"
+preview_command = "exa -lh --icons --color=always ~/dev/annise/annise-lambda-exec"
+
+[[window]]
+name = "git bla"
+startup_script = "eval (ssh-agent -c) && ssh-add ~/.ssh/bitbucket && git fetch"
+
+[[window]]
+name = "git"
+startup_script = "eval (ssh-agent -c) && ssh-add ~/.ssh/github && git fetch"

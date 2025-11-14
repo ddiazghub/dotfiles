@@ -29,7 +29,7 @@ return {
     bigfile = {
       enabled = true,
       notify = true,
-      size = 100 * 1024, -- Trigger at 100 KB
+      size = 10000 * 1024, -- Trigger at 10 MB
     },
     bufdelete = { enabled = true },
     dashboard = {
