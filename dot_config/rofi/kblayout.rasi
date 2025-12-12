@@ -1,0 +1,38 @@
+@import "colors"
+@import "global"
+
+window {
+    width:                      300px;
+}
+
+configuration {
+    show-icons:                 true;
+    click-to-exit:              true;
+    hover-select:               true;
+    disable-history:            true;
+    fixed-num-lines:            true;
+    timeout {
+        delay:                  3;
+        action:                 "kb-cancel";
+    }
+    kb-row-down:                "Down,j";
+    kb-row-up:                  "Up,k";
+    kb-accept-entry:            "Return,l";
+    kb-cancel:                  "Escape,h";
+    kb-clear-line:              "";
+    kb-remove-char-back:        "";
+    kb-remove-char-forward:     "";
+    kb-remove-word-back:        "";
+    kb-remove-word-forward:     "";
+    kb-remove-to-eol:           "";
+    kb-remove-to-sol:           "";
+    kb-screenshot:              "a,b,c,d,e,f,g,i,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,space,period,comma,slash,semicolon,apostrophe,bracketleft,bracketright,backslash,minus,equal";
+}
+
+inputbar {
+    enabled:                    false;
+}
+
+listview {
+    lines:                      2;
+}

@@ -88,13 +88,30 @@ return {
     gitbrowse = { enabled = true },
     image = { enabled = true },
     indent = { enabled = true },
-    input = { enabled = true },
+    input = {
+      enabled = true,
+      win = {
+        relative = 'editor',
+        row = math.floor(vim.o.lines / 2) - 1, -- Show in center of screen
+      },
+    },
     lazygit = { enabled = true },
     picker = {
       enabled = true,
       exclude = {
         '.git',
         'node_modules',
+      },
+      formatters = {
+        file = {
+          filename_first = true,
+        },
+      },
+      previewers = {
+        diff = {
+          style = 'fancy',
+          cmd = { 'delta' },
+        },
       },
     },
     notifier = { enabled = true, style = 'fancy' },

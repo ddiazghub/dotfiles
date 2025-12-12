@@ -1,0 +1,17 @@
+@import "colors"
+@import "global"
+
+/* ---- Configuration ---- */
+configuration {
+    modes:                       "combi";
+    combi-modes:                 "drun,modes:~/.config/rofi/scripts/modes.sh";
+    show-icons:                 true;
+    drun-display-format:        "{name}";
+    drun-show-actions:          true;
+    window-format:              "{w} · {c} · {t}";
+    display-combi:              "󰀻";
+}
+
+textbox-prompt-colon {
+    str:                        ">";
+}

@@ -1,0 +1,16 @@
+@import "colors"
+@import "global"
+
+window {
+    width:                      500px;
+}
+
+configuration {
+    show-icons:                 false;
+}
+
+listview {
+    lines:                      10;
+    dynamic:                    true;
+    fixed-height:               false;
+}

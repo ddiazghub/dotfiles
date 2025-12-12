@@ -15,12 +15,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
--- TIP: Disable arrow keys in normal mode
-vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
-
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
@@ -29,7 +23,6 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- [[ Comments ]]
 -- TODO: Merge builtin comment functionality with motions
-
 -- [[ Emacs Motions ]]
 vim.keymap.set({ 'i', 'c' }, '<C-a>', '<Home>', { desc = 'Emacs: Beginning of line' })
 vim.keymap.set({ 'i', 'c' }, '<C-e>', '<End>', { desc = 'Emacs: End of line' })
@@ -57,7 +50,7 @@ local function smart_splits()
   vim.keymap.set('n', '<A-j>', require('smart-splits').resize_down, { desc = 'Resize Pane to the left' })
   vim.keymap.set('n', '<A-k>', require('smart-splits').resize_up, { desc = 'Resize Pane to the left' })
   vim.keymap.set('n', '<A-l>', require('smart-splits').resize_right, { desc = 'Resize Pane to the left' })
-  -- moving between splits
+  -- m/keymapoving between splits
   vim.keymap.set({ 'n', 't' }, '<C-h>', require('smart-splits').move_cursor_left, { desc = 'Focus Pane to the left' })
   vim.keymap.set({ 'n', 't' }, '<C-j>', require('smart-splits').move_cursor_down, { desc = 'Focus Pane under current' })
   vim.keymap.set({ 'n', 't' }, '<C-k>', require('smart-splits').move_cursor_up, { desc = 'Focus Pane above current' })
@@ -85,11 +78,19 @@ local function lsp(buffer, client)
   vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, { buffer = buffer, desc = '[L]SP: [R]ename' })
   vim.keymap.set({ 'n', 'x' }, '<leader>la', vim.lsp.buf.code_action, { buffer = buffer, desc = '[L]SP: Code [A]ction' })
   vim.keymap.set('n', 'gd', Snacks.picker.lsp_definitions, { buffer = buffer, desc = 'LSP: [G]oto [D]efinition' }) --  To jump back, press <C-t>.
-  vim.keymap.set('n', 'gi', Snacks.picker.lsp_implementations, { buffer = buffer, desc = 'LSP: [G]oto [I]mplementation' })
+  vim.keymap.set('n', 'gri', Snacks.picker.lsp_implementations, { buffer = buffer, desc = 'LSP: [G]oto [I]mplementation' })
+  vim.keymap.set('n', 'grr', Snacks.picker.lsp_references, { buffer = buffer, desc = 'LSP: [G]oto [R]eference' })
   vim.keymap.set('n', 'gD', Snacks.picker.lsp_declarations, { buffer = buffer, desc = 'LSP: [G]oto [D]eclaration' })
-  vim.keymap.set('n', 'gt', Snacks.picker.lsp_type_definitions, { buffer = buffer, desc = 'LSP: [G]oto [T]ype Definition' })
+  vim.keymap.set('n', 'grt', Snacks.picker.lsp_type_definitions, { buffer = buffer, desc = 'LSP: [G]oto [T]ype Definition' })
+  vim.keymap.set('n', 'g0', Snacks.picker.lsp_symbols, { buffer = buffer, desc = 'LSP: Document Symbols' })
+  vim.keymap.set('n', 'grn', function()
+    require('live-rename').rename()
 
-  vim.keymap.set('n', '<leader>ls', Snacks.picker.lsp_symbols, { buffer = buffer, desc = '[L]SP: Document [S]ymbols' })
+    vim.schedule(function()
+      vim.api.nvim_feedkeys('A', 'n', false)
+    end)
+  end, { buffer = buffer, desc = 'LSP: Rename' })
+
   vim.keymap.set('n', '<leader>lS', Snacks.picker.lsp_workspace_symbols, { buffer = buffer, desc = '[L]SP: Open Workspace Symbols' })
   vim.keymap.set('n', '<leader>lc', Snacks.picker.lsp_incoming_calls, { buffer = buffer, desc = '[L]SP: [C]alls Incoming' })
   vim.keymap.set('n', '<leader>lC', Snacks.picker.lsp_outgoing_calls, { buffer = buffer, desc = '[L]SP: [C]alls Outgoing' })
@@ -108,7 +109,53 @@ end
 local snacks = {
   ---@type { [1]: string, [2]: function, desc: string }[]
   general = {
-    -- find
+    {
+      '<leader>d:',
+      function()
+        Snacks.input.input({ prompt = ':' }, function(value)
+          if value and value ~= '' then
+            vim.cmd(value)
+          end
+        end)
+      end,
+      desc = 'Command Line',
+    },
+    {
+      '<leader>d:',
+      function()
+        Snacks.input.input({ prompt = ':', default = "'<,'>" }, function(value)
+          if value and value ~= '' and value ~= "'<,'>" then
+            vim.cmd(value)
+          end
+        end)
+      end,
+      desc = 'Command Line (Visual Range)',
+      mode = 'v',
+    },
+    {
+      '<leader>d/',
+      function()
+        Snacks.input.input({ prompt = 'Search Forward' }, function(value)
+          dd(value)
+          if value and value ~= '' then
+            vim.cmd('/' .. value)
+          end
+        end)
+      end,
+      desc = 'Search Forward',
+    },
+    {
+      '<leader>d?',
+      function()
+        Snacks.input.input({ prompt = 'Search Backwards' }, function(value)
+          dd(value)
+          if value and value ~= '' then
+            vim.cmd('?' .. value)
+          end
+        end)
+      end,
+      desc = 'Search Backwards',
+    },
     {
       '<leader><space>',
       function()
@@ -342,7 +389,11 @@ local snacks = {
     {
       '<leader>sn',
       function()
-        Snacks.picker.notifications()
+        Snacks.picker.notifications {
+          layout = {
+            preset = 'vertical',
+          },
+        }
       end,
       desc = '[S]earch: [N]otification History',
     },

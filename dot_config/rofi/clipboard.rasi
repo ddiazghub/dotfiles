@@ -1,0 +1,20 @@
+@import "colors"
+@import "global"
+
+configuration {
+    show-icons:                 true;
+    display-clipboard:          "Clipboard";
+}
+
+textbox-prompt-colon {
+    str:                        "Clipboard >";
+}
+
+listview {
+    lines:                      10;
+}
+
+/* Larger icons for clipboard image previews */
+element-icon {
+    size:                       64px;
+}

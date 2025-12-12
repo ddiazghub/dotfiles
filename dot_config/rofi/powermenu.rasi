@@ -1,0 +1,18 @@
+@import "colors"
+@import "global"
+
+window {
+    width:                      300px;
+}
+
+configuration {
+    show-icons:                 true;
+}
+
+inputbar {
+    enabled:                    false;
+}
+
+listview {
+    lines:                      5;
+}

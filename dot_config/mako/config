@@ -1,0 +1,94 @@
+# Mako notification daemon configuration
+# Theme based on rofi color scheme
+
+# ---- Display ----
+max-visible=5
+sort=-time
+layer=overlay
+anchor=top-right
+
+# ---- Appearance ----
+font=JetBrainsMono NF Bold 11
+background-color=#1e0028B3
+text-color=#FFFFFF
+border-color=#02A4D2
+border-size=4
+border-radius=0
+padding=15
+margin=10
+# width=350
+# height=150
+outer-margin=10
+
+# ---- Icons ----
+icons=1
+icon-path=/home/neoddiaz/.local/share/icons/sweet-rainbow/
+max-icon-size=48
+icon-location=left
+
+# ---- Behavior ----
+default-timeout=5000
+ignore-timeout=0
+
+# ---- Actions ----
+on-button-left=invoke-default-action
+on-button-right=dismiss
+on-button-middle=dismiss-all
+
+# ---- Grouping ----
+# Group notifications from the same app
+group-by=app-name
+# Format for grouped notifications (shows count)
+
+# ---- Format ----
+# %s = summary (title), %b = body, %a = app name
+format=<span foreground="#02A4D2" size="14000">%s</span>\n%b
+
+# ---- History ----
+# Keep history of dismissed notifications
+# Access with: makoctl history
+max-history=20
+
+# ---- Progress bar ----
+# Used by apps that send progress updates (e.g., volume/brightness)
+progress-color=over #056F93
+
+# ---- Urgency: Low ----
+[urgency=low]
+background-color=#1e0028B3
+border-color=#6c7086
+format=<span foreground="#77e8e1" size="14000">%s</span>\n%b
+default-timeout=3000
+
+# ---- Urgency: Normal ----
+[urgency=normal]
+background-color=#1e0028B3
+border-color=#02A4D2
+default-timeout=5000
+
+# ---- Urgency: Critical ----
+# Critical notifications don't timeout by default
+[urgency=critical]
+background-color=#1e0028E6
+border-color=#ff5555
+text-color=#ff5555
+format=<span foreground="#ff5555" size="14000">%s</span>\n<span foreground="#cc7766">%b</span>
+default-timeout=0
+
+# ---- Grouped notifications ----
+[grouped]
+format=<span foreground="#02A4D2" size="14000">%s (%g)</span>\n%b
+
+# ---- Grouped low urgency notifications ----
+[grouped urgency=low]
+format=<span foreground="#77e8e1" size="14000">%s (%g)</span>\n%b
+
+# ---- Grouped critical notifications ----
+[grouped urgency=critical]
+format=<span foreground="#ff5555" size="14000">%s (%g)</span>\n<span foreground="#cc7766">%b</span>
+
+# ---- Mode: Do Not Disturb ----
+# Enable with: makoctl mode -a dnd
+# Disable with: makoctl mode -r dnd
+[mode=dnd]
+invisible=1

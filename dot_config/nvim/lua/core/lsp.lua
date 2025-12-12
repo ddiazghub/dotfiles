@@ -25,6 +25,9 @@ vim.lsp.enable { -- Hyprland
   -- Shell
   'bashls',
   'fish_lsp',
+
+  -- C/C++
+  'qmlls',
 }
 
 -- Diagnostic Config

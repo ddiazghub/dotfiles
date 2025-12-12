@@ -1,0 +1,17 @@
+@import "colors"
+@import "global"
+
+window {
+    width:                      400px;
+}
+
+configuration {
+    show-icons:                 false;
+    display-calc:               "󰃬";
+}
+
+listview {
+    lines:                      5;
+    dynamic:                    true;
+    fixed-height:               false;
+}

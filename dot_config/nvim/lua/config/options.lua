@@ -56,6 +56,7 @@ vim.o.smartcase = true -- Case-insensitive searching UNLESS \C or one or more ca
 vim.o.incsearch = true -- Show search results while typing
 
 -- UI
+vim.o.laststatus = 3 -- Global statusline (single statusline at bottom)
 vim.o.termguicolors = true -- Enable 24 Bit RGB colors
 vim.o.showmatch = true -- Highlight matching brackets
 vim.o.winborder = 'rounded' -- Round borders for floating windows
@@ -63,6 +64,7 @@ vim.o.winblend = 0 -- Set floating window transparency to 0
 vim.o.pumblend = 0 -- Set popup menu transparency to 0
 vim.o.lazyredraw = true -- Do not redraw UI while executing macros
 vim.o.synmaxcol = 300 -- Syntax highlight up to 300 characters in a single line
+vim.o.cmdheight = 0 -- Bottom commandline does not take any space
 
 -- Files
 vim.o.backup = false -- Don't create backup files

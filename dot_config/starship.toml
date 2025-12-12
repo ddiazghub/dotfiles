@@ -196,6 +196,42 @@ symbol = " "
 [zig]
 symbol = " "
 
+# ──────────────────────────────
+# Custom Node Source Indicator
+# ──────────────────────────────
+[custom.node_source]
+command = """
+if command -v node &> /dev/null; then
+  node_path=$(which node)
+  if [[ "$node_path" == *"nvm"* ]]; then
+    echo "(nvm)"
+  else
+    echo "(sys)"
+  fi
+fi
+"""
+when = "test -f package.json"
+shell = ["bash", "--noprofile", "--norc"]
+style = "bold green"
+format = "[$output]($style) "
+
+# ──────────────────────────────
+# Custom SSH Agent Status Module
+# ──────────────────────────────
+[custom.ssh]
+command = """
+if [ -n "$SSH_AUTH_SOCK" ]; then
+  email=$(ssh-add -l 2>/dev/null | awk '{print $3}')
+  echo "🔑 $email (SSH)"
+else
+  echo ""
+fi
+"""
+when = "test -n \"$SSH_AUTH_SOCK\""
+shell = ["bash", "--noprofile", "--norc"]
+style = "bold blue"
+format = "with [$output]($style) "
+
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
 flamingo = "#f2cdcd"
@@ -223,20 +259,3 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
-
-# ──────────────────────────────
-# Custom SSH Agent Status Module
-# ──────────────────────────────
-[custom.ssh]
-command = """
-if [ -n "$SSH_AUTH_SOCK" ]; then
-  email=$(ssh-add -l 2>/dev/null | awk '{print $3}')
-  echo "🔑 $email (SSH)"
-else
-  echo ""
-fi
-"""
-when = "test -n \"$SSH_AUTH_SOCK\""
-shell = ["bash", "--noprofile", "--norc"]
-style = "bold blue"
-format = "with [$output]($style) "
