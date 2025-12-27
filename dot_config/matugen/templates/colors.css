@@ -1,0 +1,17 @@
+/*
+* Css Colors
+* Generated with Matugen
+*/
+<* for name, value in colors *>
+    @define-color {{name}} {{value.default.hex}};
+<* endfor *>
+
+/* Background colors with 0.7 opacity */
+@define-color surface_alpha {{colors.surface.default.rgba | set_alpha: 0.7}};
+@define-color surface_dim_alpha {{colors.surface_dim.default.rgba | set_alpha: 0.7}};
+@define-color surface_container_alpha {{colors.surface_container.default.rgba | set_alpha: 0.7}};
+@define-color surface_container_low_alpha {{colors.surface_container_low.default.rgba | set_alpha: 0.7}};
+@define-color surface_container_lowest_alpha {{colors.surface_container_lowest.default.rgba | set_alpha: 0.7}};
+@define-color surface_container_high_alpha {{colors.surface_container_high.default.rgba | set_alpha: 0.7}};
+@define-color surface_container_highest_alpha {{colors.surface_container_highest.default.rgba | set_alpha: 0.7}};
+@define-color background_alpha {{colors.background.default.rgba | set_alpha: 0.7}};

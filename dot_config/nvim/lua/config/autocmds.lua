@@ -1,6 +1,38 @@
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
---
+
+-- Matugen color scheme sourcing
+local function source_matugen()
+  local matugen_path = os.getenv 'HOME' .. '/.config/nvim/generated.lua'
+  local file, err = io.open(matugen_path, 'r')
+
+  if err ~= nil then
+    vim.cmd.colorscheme 'tokyonight-night'
+  else
+    dofile(matugen_path)
+    io.close(file)
+  end
+end
+
+vim.api.nvim_create_autocmd('User', {
+  desc = 'Load matugen colors after plugins are loaded',
+  group = vim.api.nvim_create_augroup('matugen-init', { clear = true }),
+  pattern = 'VeryLazy',
+  callback = source_matugen,
+})
+
+vim.api.nvim_create_autocmd('Signal', {
+  desc = 'Reload matugen colors on SIGUSR1',
+  group = vim.api.nvim_create_augroup('matugen-reload', { clear = true }),
+  pattern = 'SIGUSR1',
+  callback = function()
+    source_matugen()
+    dofile(os.getenv 'HOME' .. '/.config/nvim/lua/plugins/ui/lualine.lua')
+    require('nvim-highlight-colors').turnOn()
+    require('incline').setup()
+  end,
+})
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.hl.on_yank()`
@@ -33,17 +65,6 @@ vim.api.nvim_create_autocmd('BufWritePost', {
         end
       end)
     end
-  end,
-})
-
--- Apply my highlights when changing colorscheme
-vim.api.nvim_create_autocmd('ColorScheme', {
-  desc = 'Apply custom highlight groups when changing colorscheme',
-  group = vim.api.nvim_create_augroup('colorscheme-highlights', { clear = true }),
-  callback = function()
-    local highlights = require 'config.highlights'
-    highlights.gitsigns()
-    highlights.general()
   end,
 })
 

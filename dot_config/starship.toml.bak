@@ -1,0 +1,261 @@
+#
+#      _                 _     _       _                  _
+#  ___| |_ __ _ _ __ ___| |__ (_)_ __ | |_ ___  _ __ ___ | |
+# / __| __/ _` | '__/ __| '_ \| | '_ \| __/ _ \| '_ ` _ \| |
+# \__ \ || (_| | |  \__ \ | | | | |_) | || (_) | | | | | | |
+# |___/\__\__,_|_|  |___/_| |_|_| .__(_)__\___/|_| |_| |_|_|
+#                               |_|
+# Get editor completions based on the config schema
+'$schema' = "https://starship.rs/config-schema.json"
+palette = "catppuccin_mocha"
+add_newline = true
+format = "$all"
+right_format = "$status $cmd_duration$time"
+
+# ----- STATUS MODULE -----
+[status]
+format = '[\[$common_meaning$signal_name$maybe_int\]]($style)'
+disabled = false
+
+# ----- CHARACTER MODULE -----
+[character]
+success_symbol = '[\[N\]](bold green)   Arch [>>](bold green)'
+error_symbol = '[\[N\]   Arch >>](bold red)'
+vimcmd_symbol = '[\[I\]](bold green)   Arch [>>](bold green)'
+vimcmd_replace_one_symbol = '[\[R\]](bold purple)   Arch [>>](bold purple)'
+vimcmd_replace_symbol = '[\[R\]](bold purple)   Arch [>>](bold purple)'
+vimcmd_visual_symbol = '[\[V\]](bold yellow)   Arch [>>](bold yellow)'
+
+# ----- OTHER MODULES ---
+[aws]
+symbol = " "
+
+[buf]
+symbol = " "
+
+[bun]
+symbol = " "
+
+[c]
+symbol = " "
+
+[cpp]
+symbol = " "
+
+[cmake]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[deno]
+symbol = " "
+
+[directory]
+read_only = " 󰌾"
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fennel]
+symbol = " "
+
+[fortran]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[gcloud]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[git_commit]
+tag_symbol = "  "
+
+[git_status]
+format = "([$all_status$ahead_behind]($style))"
+conflicted = "[󰞇 ${count}](bold_red) "
+ahead = "[ ${count}](bold green) "
+behind = "[ ${count}](bold orange) "
+diverged = "[ 󰞇   ${ahead_count}  ${behind_count}](bold red) "
+untracked = "[ ${count}](bold text) "
+stashed = "[📥${count}](bold maroon) "
+modified = "[ ${count}](bold yellow) "
+staged = "[ ${count}](bold green) "
+renamed = "[ ${count}](bold blue) "
+deleted = "[ ${count}](bold red) "
+
+[golang]
+symbol = " "
+
+[gradle]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[ocaml]
+symbol = " "
+
+[package]
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[pijul_channel]
+symbol = " "
+
+[pixi]
+symbol = "󰏗 "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = "󱘗 "
+
+[scala]
+symbol = " "
+
+[shell]
+disabled = true
+
+[swift]
+symbol = " "
+
+[time]
+disabled = false
+
+[xmake]
+symbol = " "
+
+[zig]
+symbol = " "
+
+# ──────────────────────────────
+# Custom Node Source Indicator
+# ──────────────────────────────
+[custom.node_source]
+command = """
+if command -v node &> /dev/null; then
+  node_path=$(which node)
+  if [[ "$node_path" == *"nvm"* ]]; then
+    echo "(nvm)"
+  else
+    echo "(sys)"
+  fi
+fi
+"""
+when = "test -f package.json"
+shell = ["bash", "--noprofile", "--norc"]
+style = "bold green"
+format = "[$output]($style) "
+
+# ──────────────────────────────
+# Custom SSH Agent Status Module
+# ──────────────────────────────
+[custom.ssh]
+command = """
+if [ -n "$SSH_AUTH_SOCK" ]; then
+  email=$(ssh-add -l 2>/dev/null | awk '{print $3}')
+  echo "🔑 $email (SSH)"
+else
+  echo ""
+fi
+"""
+when = "test -n \"$SSH_AUTH_SOCK\""
+shell = ["bash", "--noprofile", "--norc"]
+style = "bold blue"
+format = "with [$output]($style) "
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"

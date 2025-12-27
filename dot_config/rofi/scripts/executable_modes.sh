@@ -15,6 +15,7 @@ declare -A modes=(
 	["Calculator"]="$SCRIPTS_DIR/calc.sh"
 	["Clipboard"]="$SCRIPTS_DIR/clipboard.sh"
 	["Keyboard"]="$SCRIPTS_DIR/kblayout.sh"
+	["Colors"]="rofi -show colors -modes 'colors:$SCRIPTS_DIR/colors.sh' -config ~/.config/rofi/matugen.rasi"
 	["Power"]="$SCRIPTS_DIR/powermenu.sh"
 )
 
@@ -29,6 +30,7 @@ declare -A icons=(
 	["Calculator"]="$ICON_DIR/apps/48/accessories-calculator.svg"
 	["Clipboard"]="$ICON_DIR/actions/22/edit-paste.svg"
 	["Keyboard"]="$ICON_DIR/devices/22/input-keyboard.svg"
+	["Colors"]="$ICON_DIR/actions/22/color-picker.svg"
 	["Power"]="$ICON_DIR/actions/22/system-shutdown.svg"
 )
 
@@ -44,6 +46,7 @@ mode_order=(
 	"Calculator"
 	"Clipboard"
 	"Keyboard"
+	"Colors"
 	"Power"
 )
 

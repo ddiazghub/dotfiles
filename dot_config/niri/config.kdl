@@ -1,4 +1,6 @@
-    
+// Include matugen-generated colors
+include "colors.kdl"
+
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
@@ -106,18 +108,14 @@ layout {
 
     default-column-width { proportion 0.5; }
 
+    // Colors are set via matugen in colors.kdl (included at top)
     focus-ring {
         width 4
-        active-color "#7fc8ff"
-        inactive-color "#505050"
     }
 
     border {
         off
         width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
-        urgent-color "#9b0000"
     }
 }
 
@@ -207,27 +205,7 @@ window-rule {
 }
 
 // Indicate screencasted windows with alternate colors.
-window-rule {
-    match is-window-cast-target=true
-
-    focus-ring {
-        active-color "#f38ba8"
-        inactive-color "#7d0d2d"
-    }
-
-    border {
-        inactive-color "#7d0d2d"
-    }
-
-    shadow {
-        color "#7d0d2d70"
-    }
-
-    tab-indicator {
-        active-color "#f38ba8"
-        inactive-color "#7d0d2d"
-    }
-}
+// Colors are set via matugen in colors.kdl (included at top)
 
 // Show steam notifications on bottom right
 window-rule {

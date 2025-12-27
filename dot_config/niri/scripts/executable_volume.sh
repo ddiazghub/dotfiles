@@ -29,7 +29,6 @@ send_notification() {
 
     notify-send \
         --app-name="Volume" \
-        --urgency=low \
         --hint=int:value:$volume \
         --hint=string:x-canonical-private-synchronous:volume \
         --icon="$icon" \
@@ -54,14 +53,12 @@ case "$1" in
         if wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q MUTED; then
             notify-send \
                 --app-name="Microphone" \
-                --urgency=low \
                 --hint=string:x-canonical-private-synchronous:mic \
                 --icon="microphone-sensitivity-muted" \
                 "Microphone" "Muted"
         else
             notify-send \
                 --app-name="Microphone" \
-                --urgency=low \
                 --hint=string:x-canonical-private-synchronous:mic \
                 --icon="microphone-sensitivity-high" \
                 "Microphone" "Unmuted"

@@ -9,9 +9,8 @@
   "interval": 5,
   "layer": "top",
   "position": "top",
-  // "height": 32,
   "spacing": 0,
-  "modules-left": ["niri/workspaces", "tray", "custom/pacman"],
+  "modules-left": ["niri/workspaces", "tray", "custom/pacman", "custom/media"],
   "modules-center": [
     // "hyprland/window",
     "niri/window"
@@ -19,7 +18,7 @@
   "modules-right": [
     "network",
     "niri/language",
-    "battery",
+    "custom/battery",
     "bluetooth",
     "custom/temperature",
     "memory",
@@ -33,6 +32,7 @@
   "niri/window": {
     "icon": true,
     "icon-default": "niri",
+    "max-length": 65,
     "on-click": "niri msg action toggle-overview"
   },
   "niri/language": {
@@ -71,25 +71,11 @@
     "interval": 3,
     "on-click": "foot --app-id modal -T nmtui nmtui"
   },
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "<span color='#28CD41'> {icon} {capacity}%</span>",
-    "format-charging": "<span color='#28CD41'> 󱊥 {capacity}%</span>",
-    "format-charging-warning": "<span color='#28CD41'> 󱊤 {capacity}%</span>",
-    "format-charging-critical": "<span color='#28CD41'> 󰢟 {capacity}%</span>",
-    "format-warning": "<span color='#FFD700'> 󰁻 {capacity}%</span>",
-    "format-critical": "<span color='#FF4040'> 󱃍 {capacity}%</span>",
-    "events": {
-      "on-discharging-warning": "notify-send -normal 'Low Battery' 'Your battery will deplete soon, charge your system'",
-      "on-discharging-critical": "notify-send -u critical 'Very Low Battery' 'Charge your system now!'"
-    },
+  "custom/battery": {
+    "exec": "~/.config/waybar/scripts/battery-bar.sh",
+    "return-type": "json",
     "interval": 3,
-    "format-icons": ["󱃍", "󰁼", "󰁿", "󰂁", "󰁹"],
-    "on-click": "foot --app-id modal -T powertop sudo powertop",
-    "tooltip": true
+    "on-click": "foot --app-id modal -T powertop sudo powertop"
   },
   "memory": {
     "format": "<span color='#AA4BF2'>  {used:0.1f}G/{total:0.1f}G</span>",
@@ -107,7 +93,7 @@
   "clock": {
     "interval": 1,
     "timezone": "America/Bogota",
-    "format": "<span color='#BFFFFF'>  {:%a %b %H:%M}</span> ",
+    "format": "<span color='#BFFFFF'>  {:%H:%M}</span> ",
     "tooltip": true,
     // "tooltip-format": "This should be showing a calendar maybe but instead take this random opportunity to learn chinese: {:L%Y 年 %m 月 %d 日, %A}",
     "on-click": "foot --app-id modal calcure"
@@ -127,31 +113,30 @@
     "on-click": "foot --app-id modal -T bluetui bluetui"
   },
   "custom/pacman": {
-    "format": " <span color='#FF8888'> {text}</span> ",
+    "format": "<span color='#FF8888'> {}</span> ",
+    "return-type": "json",
     "interval": 600,
-    "exec": "(flock 9; checkupdates 2>/dev/null | wc -l) 9>/tmp/checkupdates.lock",
-    "exec-if": "exit 0",
+    "exec": "~/.config/waybar/scripts/pacman-updates.sh",
     "on-click": "foot --app-id modal bash -c 'echo \"The following packages will be updated:\" && checkupdates && echo \"Enter password to update, CTRL-C to exit:\" && sudo pacman -Syu' && pkill -SIGRTMIN+8 waybar",
     "signal": 8
+  },
+  "custom/media": {
+    "format": "<span color='#1DB954'>{}</span>",
+    "return-type": "json",
+    "interval": 2,
+    "exec": "~/.config/waybar/scripts/media-player.sh",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-click-middle": "playerctl previous"
   }
   // "custom/notification": {
   //   "tooltip": true,
-  //   "format": "<span size='11pt' color='orange'>{icon}</span>   {0}",
-  //   "format-icons": {
-  //     "notification": "󱅫",
-  //     "none": "󰂜",
-  //     "dnd-notification": "󰂠",
-  //     "dnd-none": "󰪓",
-  //     "inhibited-notification": "󰂛",
-  //     "inhibited-none": "󰪑",
-  //     "dnd-inhibited-notification": "󰂛",
-  //     "dnd-inhibited-none": "󰪑"
-  //   },
+  //   "format": "<span color='orange'>{}</span>",
   //   "return-type": "json",
-  //   "exec-if": "which swaync-client",
-  //   "exec": "swaync-client -swb",
-  //   "on-click": "swaync-client -t -sw",
-  //   "on-click-right": "swaync-client -d -sw",
-  //   "escape": true
+  //   "exec-if": "which makoctl",
+  //   "exec": "~/.config/waybar/scripts/mako-status.sh",
+  //   "interval": 1,
+  //   "on-click": "makoctl dismiss",
+  //   "on-click-right": "makoctl mode -t do-not-disturb"
   // }
 }

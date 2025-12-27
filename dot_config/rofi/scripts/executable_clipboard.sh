@@ -76,20 +76,20 @@ get_color() {
     grep -oP "$1:\s*\K[^;]+" "$COLORS_FILE" | tr -d ' '
 }
 
-foreground=$(get_color "foreground")
-foreground_alt=$(get_color "foreground-alt")
-color0=$(get_color "color0")
-color11=$(get_color "color11")
-color5=$(get_color "color5")
-color3=$(get_color "color3")
-color6=$(get_color "color6")
-color7=$(get_color "color7")
+# Map Material Design colors to fzf
+on_surface=$(get_color "on-surface")
+outline=$(get_color "outline")
+surface_solid=$(get_color "surface-solid")
+primary=$(get_color "primary")
+secondary=$(get_color "secondary")
+tertiary=$(get_color "tertiary")
+on_primary=$(get_color "on-primary")
 
 export FZF_DEFAULT_OPTS="
-    --color=bg:-1,bg+:${color11},fg:${foreground},fg+:${color0}
-    --color=hl:${color5},hl+:${color0},info:${color3},marker:${color6}
-    --color=prompt:${color11},spinner:${color5},pointer:${color7},header:${foreground_alt}
-    --color=border:${color11},label:${foreground},query:${foreground}
+    --color=bg:-1,bg+:${primary},fg:${on_surface},fg+:${on_primary}
+    --color=hl:${secondary},hl+:${on_primary},info:${tertiary},marker:${secondary}
+    --color=prompt:${primary},spinner:${secondary},pointer:${tertiary},header:${outline}
+    --color=border:${primary},label:${on_surface},query:${on_surface}
 "
 
 # Add icons based on content type

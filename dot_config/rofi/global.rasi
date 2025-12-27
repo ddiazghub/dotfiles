@@ -24,9 +24,9 @@ configuration {
 /* ---- Window ---- */
 window {
     width:                        600px;
-    color:                        @foreground;
+    color:                        @on-surface;
     border:                       @border-width;
-    border-color:                 @color11;
+    border-color:                 @primary;
     cursor:                       "default";
     transparency:                 "real";
     location:                     center;
@@ -34,7 +34,7 @@ window {
     fullscreen:                   false;
     enabled:                      true;
     border-radius:                0px;
-    background-color:             @background;
+    background-color:             @surface;
 }
 
 /* ---- Mainbox ---- */
@@ -58,11 +58,11 @@ listbox {
 /* ---- Inputbar ---- */
 inputbar {
     enabled:                      true;
-    text-color:                   @foreground;
+    text-color:                   @on-surface;
     spacing:                      5px;
     padding:                      15px;
     border-radius:                0px;
-    border-color:                 @foreground;
+    border-color:                 @on-surface;
     background-color:             transparent;
     children:                     [ "textbox-prompt-colon", "entry" ];
 }
@@ -82,7 +82,7 @@ entry {
     text-color:                   inherit;
     cursor:                       text;
     placeholder:                  "Type to filter";
-    placeholder-color:            @foreground-alt;
+    placeholder-color:            @outline;
 }
 
 /* ---- Listview ---- */
@@ -110,53 +110,53 @@ element {
     padding:                      5px;
     margin:                       5px;
     cursor:                       pointer;
-    background-color:             @background;
+    background-color:             @surface;
     border-radius:                @border-radius;
 }
 
 element normal.normal {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element normal.urgent {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element normal.active {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element selected.normal {
-    background-color:            @color11;
-    text-color:                  @foreground;
+    background-color:            @primary;
+    text-color:                  @on-primary;
 }
 
 element selected.urgent {
-    background-color:            inherit;
-    text-color:                  @foreground;
+    background-color:            @error;
+    text-color:                  @on-error;
 }
 
 element selected.active {
-    background-color:            inherit;
-    text-color:                  @foreground;
+    background-color:            @primary-container;
+    text-color:                  @on-primary-container;
 }
 
 element alternate.normal {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element alternate.urgent {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element alternate.active {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element-icon {
@@ -189,8 +189,8 @@ textbox {
     padding:                     15px;
     margin:                      0px;
     border-radius:               0px;
-    background-color:            @background;
-    text-color:                  @foreground;
+    background-color:            @surface;
+    text-color:                  @on-surface;
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }
@@ -198,6 +198,6 @@ textbox {
 error-message {
     padding:                     15px;
     border-radius:               20px;
-    background-color:            @background;
-    text-color:                  @foreground;
+    background-color:            @error-container;
+    text-color:                  @on-error-container;
 }

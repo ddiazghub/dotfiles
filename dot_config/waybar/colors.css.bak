@@ -1,0 +1,37 @@
+/* Waybar Color Scheme
+ * This file is designed to be easily overwritten by theme generators like:
+ * - matugen: matugen image wallpaper.png --config ~/.config/matugen/config.toml
+ * - pywal: wal -i wallpaper.png
+ *
+ * Colors are sourced from rofi's colors.rasi
+ */
+
+@define-color background rgba(30, 0, 40, 0.7);
+@define-color background-alt rgba(30, 0, 40, 0.9);
+@define-color background-hover rgba(70, 75, 90, 0.9);
+@define-color foreground #FFFFFF;
+@define-color foreground-alt #6c7086;
+
+/* Terminal colors (0-15) */
+@define-color color0 #0A121B;
+@define-color color1 #056F93;
+@define-color color2 #039AA5;
+@define-color color3 #02C2BC;
+@define-color color4 #02A4D2;
+@define-color color5 #01AFEE;
+@define-color color6 #01D3D2;
+@define-color color7 #77e8e1;
+@define-color color8 #53a29d;
+@define-color color9 #056F93;
+@define-color color10 #039AA5;
+@define-color color11 #02A4D2;
+@define-color color12 #02A4D2;
+@define-color color13 #01AFEE;
+@define-color color14 #01D3D2;
+@define-color color15 #77e8e1;
+
+/* Semantic color aliases for easier theming */
+@define-color accent @color5;
+@define-color warning #FFD700;
+@define-color critical #FF4040;
+@define-color success #28CD41;

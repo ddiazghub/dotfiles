@@ -1,0 +1,39 @@
+@import "colors"
+@import "global"
+
+window {
+    width:                      500px;
+}
+
+configuration {
+    show-icons:                 false;
+}
+
+listview {
+    columns:                    1;
+    lines:                      15;
+    spacing:                    2px;
+    dynamic:                    true;
+    fixed-height:               false;
+}
+
+element {
+    padding:                    8px 12px;
+}
+
+element-text {
+    horizontal-align:           0.0;
+    vertical-align:             0.5;
+}
+
+inputbar {
+    children:                   [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    str:                        "Color >";
+}
+
+entry {
+    placeholder:                "Filter by name (primary, surface, etc.)";
+}

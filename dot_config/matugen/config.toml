@@ -1,0 +1,108 @@
+[config.wallpaper]
+command = "swww"
+arguments = ["img", "--transition-type", "center"]
+set = true
+
+[templates.waybar]
+input_path = "./templates/colors.css"
+output_path = "~/.local/share/chezmoi/dot_config/waybar/colors.css"
+post_hook = "chezmoi apply && pkill -SIGUSR2 waybar"
+
+[templates.rofi]
+input_path = "./templates/rofi-colors.rasi"
+output_path = "~/.local/share/chezmoi/dot_config/rofi/colors.rasi"
+post_hook = "chezmoi apply"
+
+[templates.mako]
+input_path = "./templates/mako"
+output_path = "~/.local/share/chezmoi/dot_config/mako/config"
+post_hook = "chezmoi apply && makoctl reload"
+
+[templates.yazi]
+input_path = "./templates/yazi-theme.toml"
+output_path = "~/.local/share/chezmoi/dot_config/yazi/theme.toml"
+post_hook = "chezmoi apply"
+
+[templates.btop]
+input_path = "./templates/btop.theme"
+output_path = "~/.local/share/chezmoi/dot_config/btop/themes/matugen.theme"
+post_hook = "chezmoi apply"
+
+[templates.tmux]
+input_path = "./templates/tmux-colors.conf"
+output_path = "~/.local/share/chezmoi/dot_config/tmux/generated.conf"
+post_hook = "chezmoi apply && tmux source-file ~/.config/tmux/generated.conf"
+
+[templates.ghostty]
+input_path = "./templates/ghostty"
+output_path = "~/.local/share/chezmoi/dot_config/ghostty/themes/Matugen"
+post_hook = "chezmoi apply && pkill -SIGUSR2 ghostty"
+
+[templates.niri]
+input_path = "./templates/niri-colors.kdl"
+output_path = "~/.local/share/chezmoi/dot_config/niri/colors.kdl"
+post_hook = "chezmoi apply"
+
+[templates.fzf-fish]
+input_path = "./templates/fzf-colors.fish"
+output_path = "~/.local/share/chezmoi/dot_config/private_fish/conf.d/fzf-colors.fish"
+post_hook = "chezmoi apply"
+
+# [templates.fish-colors]
+# input_path = "./templates/fish-colors.fish"
+# output_path = "~/.local/share/chezmoi/dot_config/private_fish/conf.d/colors.fish"
+# post_hook = "chezmoi apply && source ~/.config/fish/conf.d/colors.fish"
+
+# [templates.gtk3]
+# input_path = "./templates/gtk-colors.css"
+# output_path = "~/.local/share/chezmoi/dot_config/gtk-3.0/colors.css"
+# post_hook = 'chezmoi apply && gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+# [templates.gtk4]
+# input_path = "./templates/gtk-colors.css"
+# output_path = "~/.local/share/chezmoi/dot_config/gtk-4.0/colors.css"
+# post_hook = "chezmoi apply"
+
+[templates.sweet-gtk]
+input_path = "./templates/sweet-colors.sh"
+output_path = "~/.cache/matugen/sweet-colors.sh"
+post_hook = 'chmod +x ~/.cache/matugen/sweet-colors.sh && ~/.cache/matugen/sweet-colors.sh && gsettings set org.gnome.desktop.interface gtk-theme "" && gsettings set org.gnome.desktop.interface gtk-theme Sweet'
+
+# [templates.starship]
+# input_path = "./templates/starship-colors.toml"
+# output_path = "~/.local/share/chezmoi/dot_config/starship.toml"
+
+[templates.vesktop]
+input_path = "./templates/midnight-discord.css"
+output_path = "~/.local/share/chezmoi/dot_config/private_vesktop/themes/midnight-discord.css"
+post_hook = "chezmoi apply"
+
+[templates.pywalfox]
+input_path = "./templates/pywalfox-colors.json"
+output_path = "~/.cache/wal/colors.json"
+post_hook = "/home/neoddiaz/.local/bin/pywalfox update"
+
+[templates.firefox-userchrome]
+input_path = "./templates/userChrome.css"
+output_path = "~/.mozilla/firefox/yb3vxdiz.default-release/chrome/userChrome.css"
+post_hook = "cp ~/.mozilla/firefox/yb3vxdiz.default-release/chrome/userChrome.css ~/dev/pywalfox-native/pywalfox/assets/css/userChrome.css; /home/neoddiaz/.local/bin/pywalfox update"
+
+[templates.firefox-usercontent]
+input_path = "./templates/userContent.css"
+output_path = "~/.mozilla/firefox/yb3vxdiz.default-release/chrome/userContent.css"
+post_hook = "cp ~/.mozilla/firefox/yb3vxdiz.default-release/chrome/userContent.css ~/dev/pywalfox-native/pywalfox/assets/css/userContent.css; /home/neoddiaz/.local/bin/pywalfox update"
+
+[templates.firefox-userchrome-work]
+input_path = "./templates/userChrome.css"
+output_path = "~/.mozilla/firefox/x3457jny.Work/chrome/userChrome.css"
+post_hook = "cp ~/.mozilla/firefox/x3457jny.Work/chrome/userChrome.css ~/dev/pywalfox-native/pywalfox/assets/css/userChrome.css; /home/neoddiaz/.local/bin/pywalfox update"
+
+[templates.firefox-usercontent-work]
+input_path = "./templates/userContent.css"
+output_path = "~/.mozilla/firefox/x3457jny.Work/chrome/userContent.css"
+post_hook = "cp ~/.mozilla/firefox/x3457jny.Work/chrome/userContent.css ~/dev/pywalfox-native/pywalfox/assets/css/userContent.css; /home/neoddiaz/.local/bin/pywalfox update"
+
+[templates.neovim]
+input_path = "./templates/neovim/template.lua"
+output_path = "~/.config/nvim/generated.lua"
+post_hook = "pkill -SIGUSR1 nvim"

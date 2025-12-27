@@ -5,7 +5,7 @@
     "JetBrainsMono NF", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
   font-size: 13px;
   font-weight: bold;
-  color: @foreground;
+  color: @primary;
 }
 
 #waybar {
@@ -17,76 +17,80 @@
 #workspaces,
 #window,
 #tray,
+#custom-pacman,
+#custom-notification,
+#custom-media,
 #bluetooth,
 #network,
 #language,
-#battery,
+#custom-battery,
 #memory,
 #cpu,
-#clock,
-#custom-pacman,
-#custom-notification {
+#clock {
   margin-top: 10px;
   padding: 4px 4px;
-  background-color: @background;
+  background-color: @surface_alpha;
 }
 
 #workspaces,
 #window,
-#tray,
-#custom-pacman,
-#custom-notification {
-  border: 2px solid @color11;
-  margin-right: 12px;
+#custom-media {
+  border: 2px solid @primary;
 }
 
 #workspaces {
   margin-left: 12px;
 }
 
+#tray {
+  padding-left: 12px;
+}
+
+#tray,
+#custom-pacman,
+#custom-notification,
 #network,
 #language,
 #bluetooth,
-#battery,
+#custom-battery,
 #memory,
 #cpu,
 #clock {
-  border-top: 2px solid @color11;
-  border-bottom: 2px solid @color11;
+  border-top: 2px solid @primary;
+  border-bottom: 2px solid @primary;
 }
 
-#network {
+#network,
+#tray,
+#custom-media {
   margin-left: 12px;
-  border-left: 2px solid @color11;
+  border-left: 2px solid @primary;
+}
+
+#clock,
+#custom-pacman {
+  border-right: 2px solid @primary;
 }
 
 #clock {
   margin-right: 12px;
-  border-right: 2px solid @color11;
 }
 
 #bluetooth:hover,
 #network:hover,
-#battery:hover,
+#custom-battery:hover,
 #memory:hover,
 #cpu:hover,
 #clock:hover,
 #custom-pacman:hover,
 #custom-notification:hover,
+#custom-media:hover,
 #window:hover {
-  background-color: @background-hover;
+  background-color: @surface_container_high;
 }
 
 #workspaces button:hover {
-  background-color: alpha(@color5, 0.2);
-  padding: 2px 8px;
-  margin: 0 2px;
-  border-radius: 4px;
-}
-
-#workspaces button.active {
-  background-color: @color5;
-  color: @color0;
+  background-color: alpha(@primary, 0.2);
   padding: 2px 8px;
   margin: 0 2px;
   border-radius: 4px;
@@ -95,11 +99,69 @@
 #workspaces button {
   background: transparent;
   border: none;
-  color: @foreground-alt;
   padding: 2px 8px;
   margin: 0 2px;
 }
 
+#workspaces button label {
+  color: @primary;
+}
+
+#workspaces button.active {
+  background-color: @primary;
+  color: @on_primary;
+  padding: 2px 8px;
+  margin: 0 2px;
+  border-radius: 4px;
+}
+
+#workspaces button.active label {
+  color: @on_primary;
+}
+
 #window {
   font-style: italic;
+}
+
+/* Hide empty modules */
+window#waybar.empty #window,
+#custom-media.empty {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+/* Battery progress bar colors */
+#custom-battery.normal {
+  color: #28CD41;
+}
+
+#custom-battery.charging {
+  color: #28CD41;
+}
+
+#custom-battery.full {
+  color: #28CD41;
+}
+
+#custom-battery.warning {
+  color: #FFD700;
+}
+
+#custom-battery.critical {
+  color: #FF4040;
+}
+
+/* Tooltips */
+tooltip {
+  background-color: @surface_container;
+  border: 2px solid @primary;
+  border-radius: 4px;
+}
+
+tooltip label {
+  color: @on_surface;
+  padding: 4px 8px;
 }
