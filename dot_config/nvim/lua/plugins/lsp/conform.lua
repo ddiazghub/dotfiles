@@ -2,6 +2,7 @@ local formatters_by_ft = {
   lua = { 'stylua' },
   rust = { 'rustfmt' },
   fish = { 'fish_indent' },
+  python = { 'ruff' },
 }
 
 local js_filetypes = {

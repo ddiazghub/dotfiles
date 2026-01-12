@@ -6,62 +6,62 @@ set = true
 [templates.waybar]
 input_path = "./templates/colors.css"
 output_path = "~/.local/share/chezmoi/dot_config/waybar/colors.css"
-post_hook = "chezmoi apply && pkill -SIGUSR2 waybar"
+post_hook = "chezmoi apply --force && pkill -SIGUSR2 waybar"
 
 [templates.rofi]
 input_path = "./templates/rofi-colors.rasi"
 output_path = "~/.local/share/chezmoi/dot_config/rofi/colors.rasi"
-post_hook = "chezmoi apply"
+post_hook = "chezmoi apply --force"
 
 [templates.mako]
 input_path = "./templates/mako"
 output_path = "~/.local/share/chezmoi/dot_config/mako/config"
-post_hook = "chezmoi apply && makoctl reload"
+post_hook = "chezmoi apply --force && makoctl reload"
 
 [templates.yazi]
 input_path = "./templates/yazi-theme.toml"
 output_path = "~/.local/share/chezmoi/dot_config/yazi/theme.toml"
-post_hook = "chezmoi apply"
+post_hook = "chezmoi apply --force"
 
 [templates.btop]
 input_path = "./templates/btop.theme"
 output_path = "~/.local/share/chezmoi/dot_config/btop/themes/matugen.theme"
-post_hook = "chezmoi apply"
+post_hook = "chezmoi apply --force"
 
 [templates.tmux]
 input_path = "./templates/tmux-colors.conf"
 output_path = "~/.local/share/chezmoi/dot_config/tmux/generated.conf"
-post_hook = "chezmoi apply && tmux source-file ~/.config/tmux/generated.conf"
+post_hook = "chezmoi apply --force && tmux source-file ~/.config/tmux/generated.conf"
 
 [templates.ghostty]
 input_path = "./templates/ghostty"
 output_path = "~/.local/share/chezmoi/dot_config/ghostty/themes/Matugen"
-post_hook = "chezmoi apply && pkill -SIGUSR2 ghostty"
+post_hook = "chezmoi apply --force && pkill -SIGUSR2 ghostty"
 
 [templates.niri]
 input_path = "./templates/niri-colors.kdl"
 output_path = "~/.local/share/chezmoi/dot_config/niri/colors.kdl"
-post_hook = "chezmoi apply"
+post_hook = "chezmoi apply --force"
 
 [templates.fzf-fish]
 input_path = "./templates/fzf-colors.fish"
 output_path = "~/.local/share/chezmoi/dot_config/private_fish/conf.d/fzf-colors.fish"
-post_hook = "chezmoi apply"
+post_hook = "chezmoi apply --force"
 
-# [templates.fish-colors]
-# input_path = "./templates/fish-colors.fish"
-# output_path = "~/.local/share/chezmoi/dot_config/private_fish/conf.d/colors.fish"
-# post_hook = "chezmoi apply && source ~/.config/fish/conf.d/colors.fish"
+[templates.fish-colors]
+input_path = "./templates/fish-colors.fish"
+output_path = "~/.local/share/chezmoi/dot_config/private_fish/conf.d/colors.fish"
+post_hook = "chezmoi apply --force && source ~/.config/fish/conf.d/colors.fish"
 
 # [templates.gtk3]
 # input_path = "./templates/gtk-colors.css"
 # output_path = "~/.local/share/chezmoi/dot_config/gtk-3.0/colors.css"
-# post_hook = 'chezmoi apply && gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+# post_hook = 'chezmoi apply --force && gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
 
 # [templates.gtk4]
 # input_path = "./templates/gtk-colors.css"
 # output_path = "~/.local/share/chezmoi/dot_config/gtk-4.0/colors.css"
-# post_hook = "chezmoi apply"
+# post_hook = "chezmoi apply --force"
 
 [templates.sweet-gtk]
 input_path = "./templates/sweet-colors.sh"
@@ -74,8 +74,8 @@ post_hook = 'chmod +x ~/.cache/matugen/sweet-colors.sh && ~/.cache/matugen/sweet
 
 [templates.vesktop]
 input_path = "./templates/midnight-discord.css"
-output_path = "~/.local/share/chezmoi/dot_config/private_vesktop/themes/midnight-discord.css"
-post_hook = "chezmoi apply"
+output_path = "~/.config/vesktop/themes/midnight-discord.css"
+post_hook = "chezmoi apply --force"
 
 [templates.pywalfox]
 input_path = "./templates/pywalfox-colors.json"

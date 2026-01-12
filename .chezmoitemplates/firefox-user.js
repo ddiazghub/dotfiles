@@ -691,7 +691,12 @@ user_pref("dom.ipc.processCount.webIsolated", 1); // one process per site origin
 
 // PREF: use native title bar buttons [LINUX]
 // [1] https://github.com/yokoffing/Betterfox/issues/320
-user_pref("widget.gtk.non-native-titlebar-buttons.enabled", true);
+user_pref("widget.use-xdg-desktop-portal.file-picker", 1);
+// user_pref("widget.use-xdg-desktop-portal.location", true);
+// user_pref("widget.use-xdg-desktop-portal.mime-handler", true);
+// user_pref("widget.use-xdg-desktop-portal.open-uri", true);
+user_pref("widget.use-xdg-desktop-portal.settings", 1);
+user_pref("widget.gtk.non-native-titlebar-buttons.enabled", false);
 user_pref("browser.search.widget.inNavBar", true);
 user_pref(
   "browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled",

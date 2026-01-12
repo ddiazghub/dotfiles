@@ -82,6 +82,13 @@ preview_command = "exa -lh --icons --color=always ~/.local/share/chezmoi/dot_con
 windows = ["git"]
 
 [[session]]
+name = "matugen config"
+path = "~/.local/share/chezmoi/dot_config/matugen"
+startup_command = "nvim ."
+preview_command = "exa -lh --icons --color=always ~/.local/share/chezmoi/dot_config/matugen"
+windows = ["git"]
+
+[[session]]
 name = "annise backend"
 path = "~/dev/annise/annise-backend"
 startup_command = "nvim ."

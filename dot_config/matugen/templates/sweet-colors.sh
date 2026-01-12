@@ -47,8 +47,8 @@ declare -A LIGHT_COLORS=(
     ["#cdcdcd"]="{{colors.surface_variant.default.hex}}"
 )
 
-THEME_DIR="$HOME/.themes/Sweet"
-BACKUP_DIR="$HOME/.themes/Sweet-backup"
+THEME_DIR="$HOME/.local/share/themes/Sweet"
+BACKUP_DIR="$HOME/.local/share/themes/Sweet-backup"
 
 # Create backup on first run
 backup_theme() {

@@ -9,6 +9,10 @@ vim.lsp.enable { -- Hyprland
   'vtsls',
   'biome',
 
+  -- Python ecosystem
+  'pyrefly',
+  'ruff',
+
   -- Markup
   'yamlls',
   'jsonls',

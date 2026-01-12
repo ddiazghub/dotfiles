@@ -79,10 +79,30 @@ output "eDP-1" {
 
 output "HDMI-A-1" {
     focus-at-startup
-    mode "1920x1080@120.000"
-    scale 1
+    mode "2560x1440@119.998"
+    scale 1.2
     transform "normal"
     position x=1920 y=0
+}
+
+output "HDMI-A-3" {
+    focus-at-startup
+    mode "1920x1080@143.600"
+    scale 1
+    transform "normal"
+    position x=-1920 y=0
+}
+
+output "DP-2" {
+    focus-at-startup
+    mode "1920x1080@143.600"
+    scale 1
+    transform "normal"
+    position x=-1920 y=0
+}
+
+debug {
+    render-drm-device "/dev/dri/nvidia-gpu"
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -120,7 +140,6 @@ layout {
 }
 
 // Add lines like this to spawn processes at startup.
-spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
@@ -147,6 +166,8 @@ environment {
     BROWSER "helium-browser"
     QT_QPA_PLATFORM "wayland"
     QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_STYLE_OVERRIDE "kvantum"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
 cursor {
@@ -204,6 +225,36 @@ window-rule {
     // block-out-from "screencast"
 }
 
+window-rule {
+    match app-id="^gsr-ui$"
+    
+    // 1. Remove it from the horizontal scrolling "tape"
+    open-floating true
+    // exclude-from-layout true
+
+    // // 2. Set the size to full screen (match your Window ID 10 output)
+    // default-floating-width 1920
+    // default-floating-height 1080
+
+    // default-column-width { fixed 1920; }
+    // default-window-height { fixed 1080; }
+
+    // 3. Center it exactly
+    default-floating-position x=0 y=0 relative-to="top-left"
+    
+    // 4. Make it behave like a proper overlay
+    focus-ring {
+        off
+    }
+    draw-border-with-background false
+}
+
+window-rule {
+    match app-id="^org.qutebrowser.qutebrowser$"
+    open-maximized true
+}
+
+
 // Indicate screencasted windows with alternate colors.
 // Colors are set via matugen in colors.kdl (included at top)
 
@@ -247,6 +298,11 @@ window-rule {
 /-window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
+}
+
+window-rule {
+    match app-id="vesktop"
+    draw-border-with-background false
 }
 
 // Block out mako notifications from screencasts.
