@@ -9,7 +9,7 @@ vim.lsp.enable { -- Hyprland
   'vtsls',
   'biome',
 
-  -- Python ecosystem
+  -- Python
   'pyrefly',
   'ruff',
 

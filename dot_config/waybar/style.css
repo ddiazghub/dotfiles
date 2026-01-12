@@ -3,7 +3,7 @@
 * {
   font-family:
     "JetBrainsMono NF", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
-  font-size: 13px;
+  font-size: 10pt;
   font-weight: bold;
   color: @primary;
 }
