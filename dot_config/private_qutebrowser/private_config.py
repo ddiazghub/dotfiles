@@ -1,4 +1,18 @@
+import json
+from pathlib import Path
+
+
 config.load_autoconfig(True)
+
+config.bind(";d", "hint links download")
+config.bind(";D", "hint images download")
+config.bind(";yy", "hint links yank")
+
+# TODO: Create userscript to yank and copy images
+config.bind(";yi", "hint images yank")
+
+config.unbind(";y")
+config.unbind(";d")
 
 c.auto_save.session = True
 
@@ -68,21 +82,9 @@ c.tabs.last_close = "close"
 c.tabs.new_position.related = "next"
 c.tabs.new_position.unrelated = "next"
 c.tabs.position = "left"
-c.tabs.select_on_remove = "prev"
+c.tabs.select_on_remove = "next"
 c.tabs.show = "multiple"
 c.tabs.width = "13%"
-
-c.url.searchengines = {
-    "DEFAULT": "https://duckduckgo.com/?q={}",
-    "am": "https://www.amazon.com/s?k={}",
-    "aw": "https://wiki.archlinux.org/?search={}",
-    "goog": "https://www.google.com/search?q={}",
-    "hoog": "https://hoogle.haskell.org/?hoogle={}",
-    "re": "https://www.reddit.com/r/{}",
-    "ub": "https://www.urbandictionary.com/define.php?term={}",
-    "wiki": "https://en.wikipedia.org/wiki/{}",
-    "yt": "https://www.youtube.com/results?search_query={}",
-}
 
 c.window.hide_decoration = True
 c.window.transparent = False
@@ -93,3 +95,21 @@ c.qt.args = [
     "enable-gpu-rasterization",  # Offloads drawing to GPU
     "enable-zero-copy",  # Faster image/video rendering
 ]
+
+c.url.searchengines = {
+    "DEFAULT": "https://duckduckgo.com/?q={}",
+}
+
+# Load DuckDuckGo bans as search engines.
+# WARNING: This loads all bangs into c.url.searchengines on qutebrowser startup. DuckDuckGo has ~13,000+ bangs, which might slow startup slightly.
+def load_bangs() -> None:
+    bangs_file = Path.home() / ".local/share/qutebrowser/bangs.json"
+
+    if bangs_file.exists():
+      with open(bangs_file) as f:
+          bangs = json.load(f)
+
+      for trigger, data in bangs.items():
+          c.url.searchengines[trigger] = data["url"]
+
+load_bangs()
