@@ -1,0 +1,31 @@
+@import "colors"
+@import "global"
+
+/* ---- dmenu mode overrides ---- */
+configuration {
+    show-icons:                 false;
+}
+
+inputbar {
+    children:                   [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                    true;
+    background-color:           transparent;
+    text-color:                 inherit;
+    margin:                     0px 10px 0px 0px;
+}
+
+entry {
+    placeholder:                "";
+}
+
+listview {
+    dynamic:                    true;
+    fixed-height:               false;
+}
+
+element-icon {
+    enabled:                    false;
+}

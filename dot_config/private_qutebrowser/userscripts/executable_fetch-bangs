@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+
+# Fetches all DuckDuckGo bangs and writes them to a JSON file.
+#
+# Usage:
+#   :spawn --userscript fetch-bangs
+#   or run directly: ./fetch-bangs
+#
+# Output: ~/.local/share/qutebrowser/bangs.json
+
+import json
+import os
+import requests
+
+BANGS_URL = "https://duckduckgo.com/bang.js"
+OUTPUT_DIR = os.path.expanduser("~/.local/share/qutebrowser")
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, "bangs.json")
+
+
+def fetch_bangs():
+    r = requests.get(BANGS_URL, headers={"user-agent": "qutebrowser fetch-bangs"})
+    r.raise_for_status()
+    return r.json()
+
+
+def process_bangs(bangs):
+    """Convert bangs to qutebrowser searchengines format."""
+    result = {}
+    for bang in bangs:
+        trigger = bang.get("t", "")
+        url = bang.get("u", "")
+        if trigger and url:
+            # First escape all { and } as {{ and }}
+            url = url.replace("{", "{{").replace("}", "}}")
+            # Then convert DuckDuckGo placeholder {{{s}}} (now {{{{{{s}}}}}}) back to {}
+            url = url.replace("{{{{{{s}}}}}}", "{}")
+            # Skip URLs that don't have exactly one placeholder
+            if url.count("{}") != 1:
+                continue
+
+            result[trigger] = {
+                "url": url,
+                "name": bang.get("s", ""),
+                "category": bang.get("c", ""),
+                "subcategory": bang.get("sc", ""),
+            }
+    return result
+
+
+def main():
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    bangs = fetch_bangs()
+    processed = process_bangs(bangs)
+
+    with open(OUTPUT_FILE, "w") as f:
+        json.dump(processed, f, indent=2)
+
+    msg = f"Fetched {len(processed)} bangs to {OUTPUT_FILE}"
+
+    if os.getenv("QUTE_FIFO"):
+        with open(os.environ["QUTE_FIFO"], "w") as fifo:
+            fifo.write("config-source\n")
+            fifo.flush()
+            fifo.write(f"message-info '{msg}'")
+    else:
+        print(msg)
+
+
+if __name__ == "__main__":
+    main()
