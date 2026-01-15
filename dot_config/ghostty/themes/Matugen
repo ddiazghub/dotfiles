@@ -1,5 +1,5 @@
-foreground = #e0e4db
-cursor-color = #e0e4db
-cursor-text = #c2c9bd
-selection-background = #b9ccb4
-selection-foreground = #253423
+foreground = #ece1d4
+cursor-color = #ece1d4
+cursor-text = #d1c5b4
+selection-background = #dac3a0
+selection-foreground = #3c2e15

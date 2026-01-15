@@ -106,3 +106,13 @@ post_hook = "cp ~/.mozilla/firefox/x3457jny.Work/chrome/userContent.css ~/dev/py
 input_path = "./templates/neovim/template.lua"
 output_path = "~/.config/nvim/generated.lua"
 post_hook = "pkill -SIGUSR1 nvim"
+
+[templates.qutebrowser]
+input_path = "./templates/qutebrowser-colors.py"
+output_path = "~/.local/share/chezmoi/dot_config/private_qutebrowser/colors.py"
+post_hook = "chezmoi apply --force && qutebrowser ':config-source'"
+
+[templates.qutebrowser-userstyle]
+input_path = "./templates/qutebrowser-userstyle.css"
+output_path = "~/.local/share/chezmoi/dot_config/private_qutebrowser/userstyles/matugen-all-sites.css"
+post_hook = "chezmoi apply --force && qutebrowser ':set content.user_stylesheets userstyles/matugen-all-sites.css'"
