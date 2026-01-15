@@ -9,9 +9,9 @@ anchor=top-right
 
 # ---- Appearance ----
 font=JetBrainsMono NF Bold 11
-background-color=#0e1416B3
-text-color=#dee3e5
-border-color=#83d2e5
+background-color=#14140cB3
+text-color=#e6e3d5
+border-color=#cbcb76
 border-size=4
 border-radius=0
 padding=15
@@ -39,30 +39,30 @@ on-button-middle=dismiss-all
 group-by=app-name
 
 # ---- Format ----
-format=<span foreground="#83d2e5" size="14000">%s</span>\n%b
+format=<span foreground="#cbcb76" size="14000">%s</span>\n%b
 
 # ---- History ----
 max-history=20
 
 # ---- Progress bar ----
-progress-color=over #004e5b
+progress-color=over #494900
 
 # ---- Urgency: Low ----
 [urgency=low]
-background-color=#0e1416B3
-border-color=#899295
-format=<span foreground="#bdc5eb" size="14000">%s</span>\n%b
+background-color=#14140cB3
+border-color=#939182
+format=<span foreground="#a4d0bd" size="14000">%s</span>\n%b
 default-timeout=3000
 
 # ---- Urgency: Normal ----
 [urgency=normal]
-background-color=#0e1416B3
-border-color=#83d2e5
+background-color=#14140cB3
+border-color=#cbcb76
 default-timeout=5000
 
 # ---- Urgency: Critical ----
 [urgency=critical]
-background-color=#0e1416E6
+background-color=#14140cE6
 border-color=#93000a
 text-color=#ff5555
 format=<span foreground="#ff5555" size="14000">%s</span>\n<span foreground="#ff8888">%b</span>
@@ -70,11 +70,11 @@ default-timeout=0
 
 # ---- Grouped notifications ----
 [grouped]
-format=<span foreground="#83d2e5" size="14000">%s (%g)</span>\n%b
+format=<span foreground="#cbcb76" size="14000">%s (%g)</span>\n%b
 
 # ---- Grouped low urgency notifications ----
 [grouped urgency=low]
-format=<span foreground="#bdc5eb" size="14000">%s (%g)</span>\n%b
+format=<span foreground="#a4d0bd" size="14000">%s (%g)</span>\n%b
 
 # ---- Grouped critical notifications ----
 [grouped urgency=critical]

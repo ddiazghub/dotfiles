@@ -8,9 +8,12 @@ if TYPE_CHECKING:
 config: ConfigAPI = globals()["config"]
 c: ConfigContainer = globals()["c"]
 
-config.load_autoconfig(True)
-config.source('./bangs.py')
-config.source('./binds.py')
-config.source('./colors.py')
-config.source('./theme.py')
-config.source('./options.py')
+config.bind(";d", "hint links download")
+config.bind(";D", "hint images download")
+config.bind(";yy", "hint links yank")
+
+# TODO: Create userscript to yank and copy images
+config.bind(";yi", "hint images yank")
+
+config.unbind(";y")
+config.unbind(";d")
