@@ -95,9 +95,9 @@ c.colors.prompts.selected.fg = "#e8e78f"
 
 # Statusbar
 c.colors.statusbar.normal.fg = "#e8e78f"
-c.colors.statusbar.normal.bg = rgba("#1d1d00", 0.7)
-c.colors.statusbar.insert.fg = "#323200"
-c.colors.statusbar.insert.bg = rgba("#cbcb76", 0.9)
+c.colors.statusbar.normal.bg = rgba("#1d1d00", 0.1)
+c.colors.statusbar.insert.fg = "#e8e78f"
+c.colors.statusbar.insert.bg = rgba("#494900", 0.9)
 c.colors.statusbar.passthrough.fg = "#323218"
 c.colors.statusbar.passthrough.bg = rgba("#cac8a5", 0.9)
 c.colors.statusbar.private.fg = "#bfecd8"
@@ -107,7 +107,7 @@ c.colors.statusbar.command.bg = rgba("#494900", 0.85)
 c.colors.statusbar.command.private.fg = "#bfecd8"
 c.colors.statusbar.command.private.bg = rgba("#254e40", 0.85)
 c.colors.statusbar.caret.fg = "#bfecd8"
-c.colors.statusbar.caret.bg = rgba("#002117", 0.9)
+c.colors.statusbar.caret.bg = rgba("#254e40", 0.9)
 c.colors.statusbar.caret.selection.fg = "#bfecd8"
 c.colors.statusbar.caret.selection.bg = rgba("#254e40", 0.9)
 c.colors.statusbar.progress.bg = rgba("#cbcb76", 0.9)
@@ -119,7 +119,7 @@ c.colors.statusbar.url.success.https.fg = "#bfecd8"
 c.colors.statusbar.url.warn.fg = "#93000a"
 
 # Tabs
-c.colors.tabs.bar.bg = rgba("#1d1d00", 0.2)
+c.colors.tabs.bar.bg = rgba("#1d1d00", 0.1)
 c.colors.tabs.indicator.start = "#cac8a5"
 c.colors.tabs.indicator.stop = blend_colors("#cbcb76", "#00ff00", 0.4)
 c.colors.tabs.indicator.error = "#ffb4ab"

@@ -1,4 +1,5 @@
 from typing import TYPE_CHECKING
+from pathlib import Path
 
 if TYPE_CHECKING:
     from qutebrowser.config.configfiles import ConfigAPI
@@ -6,6 +7,8 @@ if TYPE_CHECKING:
 
 config: ConfigAPI = globals()["config"]
 c: ConfigContainer = globals()["c"]
+
+c.content.user_stylesheets = [str(Path.home() / ".config/qutebrowser/userstyles/matugen-all-sites.css")]
 
 # Webpage darkmode settings
 c.colors.webpage.darkmode.algorithm = "lightness-cielab"

@@ -7,6 +7,8 @@ vim.lsp.enable { -- Hyprland
 
   -- TS/JS ecosystem
   'vtsls',
+  'cssls',
+  'superhtml',
   'biome',
 
   -- Python ecosystem

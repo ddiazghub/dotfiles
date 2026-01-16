@@ -1,4 +1,5 @@
 from typing import TYPE_CHECKING
+from pathlib import Path
 
 if TYPE_CHECKING:
     from qutebrowser.config.configfiles import ConfigAPI
@@ -8,9 +9,11 @@ if TYPE_CHECKING:
 config: ConfigAPI = globals()["config"]
 c: ConfigContainer = globals()["c"]
 
+home = Path.home()
 config.load_autoconfig(True)
-config.source('./bangs.py')
-config.source('./binds.py')
-config.source('./colors.py')
-config.source('./theme.py')
-config.source('./options.py')
+
+config.source(home / '.config/qutebrowser/bangs.py')
+config.source(home / '.config/qutebrowser/binds.py')
+config.source(home / '.config/qutebrowser/colors.py')
+config.source(home / '.config/qutebrowser/theme.py')
+config.source(home / '.config/qutebrowser/options.py')
