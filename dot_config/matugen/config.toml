@@ -110,9 +110,9 @@ post_hook = "pkill -SIGUSR1 nvim"
 [templates.qutebrowser]
 input_path = "./templates/qutebrowser-colors.py"
 output_path = "~/.local/share/chezmoi/dot_config/private_qutebrowser/colors.py"
-post_hook = "chezmoi apply --force && qutebrowser ':config-source'"
+post_hook = "chezmoi apply --force && ~/.config/matugen/scripts/qb-reload ':config-source' &"
 
 [templates.qutebrowser-userstyle]
 input_path = "./templates/qutebrowser-userstyle.css"
 output_path = "~/.local/share/chezmoi/dot_config/private_qutebrowser/userstyles/matugen-all-sites.css"
-post_hook = "chezmoi apply --force && qutebrowser ':set content.user_stylesheets userstyles/matugen-all-sites.css'"
+post_hook = "chezmoi apply --force && ~/.config/matugen/scripts/qb-reload ':set content.user_stylesheets ~/.config/qutebrowser/userstyles/matugen-all-sites.css'"

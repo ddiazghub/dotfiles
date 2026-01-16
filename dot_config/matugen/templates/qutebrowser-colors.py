@@ -95,9 +95,9 @@ c.colors.prompts.selected.fg = "{{colors.on_primary_container.default.hex}}"
 
 # Statusbar
 c.colors.statusbar.normal.fg = "{{colors.primary_fixed.default.hex}}"
-c.colors.statusbar.normal.bg = rgba("{{colors.on_primary_fixed.default.hex}}", 0.7)
-c.colors.statusbar.insert.fg = "{{colors.on_primary.default.hex}}"
-c.colors.statusbar.insert.bg = rgba("{{colors.primary.default.hex}}", 0.9)
+c.colors.statusbar.normal.bg = rgba("{{colors.on_primary_fixed.default.hex}}", 0.1)
+c.colors.statusbar.insert.fg = "{{colors.on_primary_container.default.hex}}"
+c.colors.statusbar.insert.bg = rgba("{{colors.primary_container.default.hex}}", 0.9)
 c.colors.statusbar.passthrough.fg = "{{colors.on_secondary.default.hex}}"
 c.colors.statusbar.passthrough.bg = rgba("{{colors.secondary.default.hex}}", 0.9)
 c.colors.statusbar.private.fg = "{{colors.on_tertiary_container.default.hex}}"
@@ -106,8 +106,8 @@ c.colors.statusbar.command.fg = "{{colors.on_primary_container.default.hex}}"
 c.colors.statusbar.command.bg = rgba("{{colors.primary_container.default.hex}}", 0.85)
 c.colors.statusbar.command.private.fg = "{{colors.on_tertiary_container.default.hex}}"
 c.colors.statusbar.command.private.bg = rgba("{{colors.tertiary_container.default.hex}}", 0.85)
-c.colors.statusbar.caret.fg = "{{colors.tertiary_fixed.default.hex}}"
-c.colors.statusbar.caret.bg = rgba("{{colors.on_tertiary_fixed.default.hex}}", 0.9)
+c.colors.statusbar.caret.fg = "{{colors.on_tertiary_container.default.hex}}"
+c.colors.statusbar.caret.bg = rgba("{{colors.tertiary_container.default.hex}}", 0.9)
 c.colors.statusbar.caret.selection.fg = "{{colors.on_tertiary_container.default.hex}}"
 c.colors.statusbar.caret.selection.bg = rgba("{{colors.tertiary_container.default.hex}}", 0.9)
 c.colors.statusbar.progress.bg = rgba("{{colors.primary.default.hex}}", 0.9)
@@ -119,7 +119,7 @@ c.colors.statusbar.url.success.https.fg = "{{colors.tertiary_fixed.default.hex}}
 c.colors.statusbar.url.warn.fg = "{{colors.error_container.default.hex}}"
 
 # Tabs
-c.colors.tabs.bar.bg = rgba("{{colors.on_primary_fixed.default.hex}}", 0.2)
+c.colors.tabs.bar.bg = rgba("{{colors.on_primary_fixed.default.hex}}", 0.1)
 c.colors.tabs.indicator.start = "{{colors.secondary.default.hex}}"
 c.colors.tabs.indicator.stop = blend_colors("{{colors.primary.default.hex}}", "#00ff00", 0.4)
 c.colors.tabs.indicator.error = "{{colors.error.default.hex}}"

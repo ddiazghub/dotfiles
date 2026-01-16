@@ -8,57 +8,57 @@ a:visited {
   color: {{colors.tertiary.default.hex}} !important;
 }
 body {
-  background-color: {{colors.surface.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 html {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 input,
 textarea {
-  background-color: {{colors.surface_container.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 blockquote,
 pre {
-  background-color: {{colors.surface_container.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .post-actions {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .textarea-wrapper {
-  background-color: {{colors.surface.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .search--adv {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .search__autocomplete > .acp-wrap {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .search__autocomplete > .acp-wrap > .acp--highlight {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.on_surface_variant.default.hex}} !important;
 }
 .search__autocomplete > .acp-wrap strong {
   color: {{colors.on_surface_variant.default.hex}} !important;
 }
 .site-wrapper > #header_wrapper {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .site-wrapper > #header_wrapper > #header {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .search--header {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .zci {
-  background-color: {{colors.surface_container.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .tile--info {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .tile--info__expand {
   background-color: {{colors.primary.default.hex}} !important;
@@ -68,23 +68,23 @@ pre {
   color: {{colors.on_surface_variant.default.hex}} !important;
 }
 .module__text {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .about-info-box__heading {
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .result.highlight {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .result__snippet {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .result__snippet b {
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .btn--top {
-  background-color: {{colors.surface_container.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .btn--top:hover {
   background-color: {{colors.primary.default.hex}} !important;
@@ -93,17 +93,17 @@ pre {
   background-color: {{colors.primary.default.hex}} !important;
 }
 * {
-  border-color: {{colors.surface_container.default.hex}} !important;
+  border-color: {{colors.on_primary.default.hex}} !important;
 }
 .news .alert .pull-info {
   background-color: {{colors.surface_container_high.default.hex}} !important;
 }
 .link-gray-dark,
 .text-gray-dark {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .bg-white {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .border {
   border-color: {{colors.primary.default.hex}} !important;
@@ -112,23 +112,23 @@ pre {
   color: {{colors.primary.default.hex}} !important;
 }
 .breadcrumb strong.final-path {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 button.ajax-pagination-btn {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 button.ajax-pagination-btn:hover {
   background-color: {{colors.primary.default.hex}} !important;
 }
 .comment-reactions .btn-link {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .comment-reactions .user-has-reacted {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .text-gray-dark {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .contrib-number {
   color: {{colors.primary_fixed.default.hex}} !important;
@@ -138,32 +138,32 @@ button.ajax-pagination-btn:hover {
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .diffstat-bar {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .file-header {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .file-history-tease .participation {
-  background-color: {{colors.surface.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .file-history-tease .participation .quickstat strong {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .file-history-tease .participation a {
   color: {{colors.primary.default.hex}} !important;
 }
 .file-history-tease .author a {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .file-history-tease-header {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .file-info-divider {
   background-color: {{colors.primary.default.hex}} !important;
 }
 .file-wrap {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .file-wrap * {
   background-color: transparent !important;
@@ -173,11 +173,11 @@ button.ajax-pagination-btn:hover {
 }
 a.filter-item,
 .filter-item {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 a.filter-item.selected,
 .filter-item.selected {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 a.filter-item:hover,
@@ -186,30 +186,30 @@ a.filter-item:hover,
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .flash {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .gh-header {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .gh-header-number {
   color: {{colors.primary.default.hex}} !important;
 }
 .ellipsis-expander,
 .hidden-text-expander a {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .issue-meta {
   color: {{colors.primary.default.hex}} !important;
 }
 .issues-listing a {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .muted-link {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .new-user-avatar-cta {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
@@ -223,10 +223,10 @@ a.filter-item:hover,
   background-color: {{colors.primary.default.hex}} !important;
 }
 .simple-box {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .social-count {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
@@ -235,16 +235,16 @@ a.filter-item:hover,
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .stats-switcher-wrapper {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .stats-switcher-wrapper .numbers-summary li a {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .table-list-header-toggle .btn-link {
   color: {{colors.primary.default.hex}} !important;
 }
 .table-list-header-toggle .btn-link.selected {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .text-emphasized {
   color: {{colors.primary_fixed.default.hex}} !important;
@@ -260,8 +260,8 @@ a.filter-item:hover,
   filter: opacity(75%);
 }
 .blob-code {
-  background-color: {{colors.surface.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .blob-code-addition {
   background-color: rgba({{colors.tertiary.default.hex_stripped}},0.1) !important;
@@ -278,21 +278,21 @@ a.filter-item:hover,
   color: {{colors.on_error_container.default.hex}} !important;
 }
 .blob-code-hunk {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.primary.default.hex}} !important;
 }
 .blob-code-inner {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .blob-num {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
   color: {{colors.primary.default.hex}} !important;
 }
 .file {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .form-control {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.primary.default.hex}} !important;
 }
 .pl-c {
@@ -318,7 +318,7 @@ a.filter-item:hover,
   color: {{colors.tertiary_fixed.default.hex}} !important;
 }
 .pl-smi {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .pl-v {
   color: {{colors.secondary.default.hex}} !important;
@@ -334,14 +334,14 @@ a.filter-item:hover,
 }
 .border-bottom,
 .border-top {
-  border-color: {{colors.surface_container.default.hex}} !important;
+  border-color: {{colors.on_primary.default.hex}} !important;
 }
 .boxed-group * {
   border-color: {{colors.primary.default.hex}} !important;
 }
 .boxed-group article {
-  background-color: {{colors.surface.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .boxed-group > h3 {
   background-color: {{colors.surface_container_high.default.hex}} !important;
@@ -352,10 +352,10 @@ a.filter-item:hover,
   box-shadow: inset 0 1px 0 {{colors.primary.default.hex}} !important;
 }
 .boxed-group-inner {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .branch-action-body {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.primary.default.hex}} !important;
 }
 .branch-action-body div {
@@ -373,7 +373,7 @@ a.filter-item:hover,
 .text-shadow-light,
 .branch-group-name,
 .branch-summary {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
   text-shadow: none !important;
 }
 .branch-a-b-count .meter {
@@ -384,7 +384,7 @@ a.filter-item:hover,
 .branch-infobar,
 .branch-name {
   border-color: {{colors.primary.default.hex}} !important;
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .State,
 .State:visited {
@@ -392,11 +392,11 @@ a.filter-item:hover,
 }
 .State--red {
   background-color: {{colors.error.default.hex}} !important;
-  color: {{colors.surface.default.hex}} !important;
+  color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .State--green {
   background-color: {{colors.tertiary.default.hex}} !important;
-  color: {{colors.surface.default.hex}} !important;
+  color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .select-menu-filters {
   background-color: {{colors.surface_container_high.default.hex}} !important;
@@ -409,10 +409,10 @@ a.filter-item:hover,
 .select-menu-tabs a.selected,
 .select-menu-tab-nav.selected {
   background-color: {{colors.primary.default.hex}} !important;
-  color: {{colors.surface.default.hex}} !important;
+  color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .signed-commit-header {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .build-status-item {
   background-color: {{colors.surface_container_high.default.hex}} !important;
@@ -428,20 +428,20 @@ a.filter-item:hover,
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .capped-card-content {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .capped-list th {
   background-color: {{colors.surface_container_high.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .capped-list tr:nth-child(2n) {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .commit,
 .commit-meta,
 .commit-icon .octicon,
 .commit-group-title .octicon-git-commit {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .commit *,
 .commit-meta *,
@@ -450,10 +450,10 @@ a.filter-item:hover,
   border-color: {{colors.primary.default.hex}} !important;
 }
 .commit-author {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .commit-author-section {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .commit-meta {
   color: {{colors.primary.default.hex}} !important;
@@ -462,11 +462,11 @@ a.filter-item:hover,
   color: {{colors.primary.default.hex}} !important;
 }
 .commit-meta .sha-block .sha {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .commit-ref,
 code.commit-sha {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .commit-ref .user,
@@ -485,29 +485,29 @@ code.commit-sha .user {
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .commit-tease-contributors {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 div.commit-branches,
 div.commit.full-commit p.commit-title,
 qul.branches-list {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 div.commit-branches *,
 div.commit.full-commit p.commit-title *,
 qul.branches-list * {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .commit-meta {
-  background-color: {{colors.surface_container.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .commits-listing:before {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .full-commit {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.primary.default.hex}} !important;
 }
 .full-commit * {
@@ -515,18 +515,18 @@ qul.branches-list * {
 }
 .commit-desc pre {
   background-color: transparent !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .commit.table-list-item {
-  border-color: {{colors.surface_container.default.hex}} !important;
+  border-color: {{colors.on_primary.default.hex}} !important;
 }
 .commit-meta.commit-author-section {
   background-color: transparent !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .table-list-cell .commit-title {
   background-color: transparent !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .completeness-indicator-success {
   background-color: {{colors.tertiary.default.hex}} !important;
@@ -536,17 +536,17 @@ qul.branches-list * {
   color: #fff !important;
 }
 .copyable-terminal {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .blankslate {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .comment-form-head.tabnav {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .conversation-list-heading .inner {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .discussion-item-closed .discussion-item-icon {
   background-color: {{colors.error.default.hex}} !important;
@@ -568,24 +568,24 @@ qul.branches-list * {
   background-color: {{colors.primary.default.hex}} !important;
 }
 .discussion-timeline-actions {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .drag-and-drop {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .new-discussion-timeline .closed-banner {
   background-color: {{colors.primary.default.hex}} !important;
-  border-color: {{colors.surface.default.hex}} !important;
+  border-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .timeline-comment {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
   border-color: {{colors.primary.default.hex}} !important;
 }
 .timeline-comment-header {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .timeline-comment-wrapper {
-  border-color: {{colors.surface.default.hex}} !important;
+  border-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .donut-chart > .pending {
   fill: {{colors.tertiary_container.default.hex}} !important;
@@ -594,7 +594,7 @@ qul.branches-list * {
   background-color: {{colors.primary.default.hex}} !important;
 }
 .dropdown-item {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .dropdown-item:hover {
   background-color: {{colors.primary.default.hex}} !important;
@@ -606,22 +606,22 @@ qul.branches-list * {
   border-color: {{colors.primary.default.hex}} !important;
 }
 .files * {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .files tbody tr {
-  border-color: {{colors.surface_container.default.hex}} !important;
+  border-color: {{colors.on_primary.default.hex}} !important;
 }
 .files tbody tr:nth-child(even) {
   background-color: {{colors.surface_container_low.default.hex}} !important;
 }
 .files tbody tr:nth-child(odd) {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .files tbody tr:hover * {
   background-color: {{colors.surface_container_high.default.hex}} !important;
 }
 .btn {
-  background-image: linear-gradient(to bottom, {{colors.primary.default.hex}}, {{colors.surface_container.default.hex}}) !important;
+  background-image: linear-gradient(to bottom, {{colors.primary.default.hex}}, {{colors.on_primary.default.hex}}) !important;
   border-color: {{colors.primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
@@ -650,21 +650,21 @@ qul.branches-list * {
 }
 .reponav-item,
 .pagehead-tabs-item {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: transparent !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .reponav-item:visited,
 .pagehead-tabs-item:visited {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .reponav-item.selected,
 .pagehead-tabs-item.selected {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
   border-color: {{colors.error.default.hex}} {{colors.surface_container_high.default.hex}} transparent !important;
 }
 .site-footer-links * {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .Box-row--focus-gray.navigation-focus {
   background-color: {{colors.surface_container_high.default.hex}} !important;
@@ -675,7 +675,7 @@ qul.branches-list * {
 }
 .js-site-search-form input,
 .js-chromeless-input-container {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
   border-color: {{colors.primary.default.hex}} !important;
 }
 a.label {
@@ -683,10 +683,10 @@ a.label {
   filter: opacity(75%);
 }
 .notifications-list a {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .notifications-list li {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .octicon-repo {
   color: {{colors.primary_fixed.default.hex}} !important;
@@ -722,7 +722,7 @@ a.label {
   color: {{colors.primary.default.hex}} !important;
 }
 .orghead {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.primary.default.hex}} !important;
   border-bottom: 0px !important;
   color: {{colors.primary_fixed.default.hex}} !important;
@@ -731,10 +731,10 @@ a.label {
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .pagehead.orghead {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .outline-box-highlighted {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .pagination .current {
@@ -742,28 +742,28 @@ a.label {
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .pagination .disabled {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary.default.hex}} !important;
 }
 .pagination .disabled:hover {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .pagination .gap {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary.default.hex}} !important;
 }
 .pagination a {
-  background-color: {{colors.surface_container.default.hex}} !important;
-  border-color: {{colors.surface.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
+  border-color: {{colors.on_secondary_fixed.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .pagination a:hover {
   background-color: {{colors.primary.default.hex}} !important;
-  color: {{colors.surface.default.hex}} !important;
+  color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .empty-cell,
 .diffbar {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .merge-status-item {
   background-color: {{colors.surface_container_high.default.hex}} !important;
@@ -772,33 +772,33 @@ a.label {
   background-color: {{colors.surface_container_high.default.hex}} !important;
 }
 .pr-toolbar {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .review-thread-reply {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .review-thread-reply .inline-comment-form {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .merged.octicon,
 .octicon-git-merge {
   color: {{colors.tertiary.default.hex}} !important;
 }
 .uploaded-files {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .upload-progress {
-  background-color: {{colors.surface_container.default.hex}} !important;
-  box-shadow: 1px 0px 0px {{colors.surface_container.default.hex}} inset;
+  background-color: {{colors.on_primary.default.hex}} !important;
+  box-shadow: 1px 0px 0px {{colors.on_primary.default.hex}} inset;
 }
 #readme .plain {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .markdown-body,
 .markdown-body table * {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
   border-color: {{colors.primary.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .markdown-body a,
 .markdown-body table * a {
@@ -808,7 +808,7 @@ a.label {
 .markdown-body table * code,
 .markdown-body pre,
 .markdown-body table * pre {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .markdown-body hr,
 .markdown-body table * hr {
@@ -816,13 +816,13 @@ a.label {
 }
 .markdown-body img,
 .markdown-body table * img {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .task-list-item.hovered {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .range-editor {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .compare-pr-placeholder {
   background-color: {{colors.surface_container_high.default.hex}} !important;
@@ -834,35 +834,35 @@ ul.comparison-list {
   background-color: {{colors.surface_container_high.default.hex}} !important;
 }
 .repository-description {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .repository-meta .edit-repository-meta label {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .pagehead.repohead {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .repository-content .RecentBranches {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.primary.default.hex}} !important;
 }
 .repohead-details-container a {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .select-menu-modal {
-  border-color: {{colors.on_surface.default.hex}} !important;
+  border-color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .select-menu-modal * {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .select-menu-header,
 .select-menu-header * {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
   text-shadow: none !important;
 }
 .select-menu-item {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .select-menu-item.navigation-focus,
 .select-menu-item.navigation-focus.selected,
@@ -872,26 +872,26 @@ ul.comparison-list {
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .repository-sidebar {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .thread-subscription-status {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .sunken-menu {
-  background-image: linear-gradient(to right, {{colors.surface_container.default.hex}} 0%, {{colors.surface.default.hex}} 8px) !important;
-  box-shadow: 1px 0px 0px {{colors.surface_container.default.hex}} inset;
+  background-image: linear-gradient(to right, {{colors.on_primary.default.hex}} 0%, {{colors.on_secondary_fixed.default.hex}} 8px) !important;
+  box-shadow: 1px 0px 0px {{colors.on_primary.default.hex}} inset;
 }
 .sunken-menu:before {
-  background-image: linear-gradient({{colors.surface.default.hex}}, transparent) !important;
+  background-image: linear-gradient({{colors.on_secondary_fixed.default.hex}}, transparent) !important;
 }
 .sunken-menu:after {
-  background-image: linear-gradient(transparent, {{colors.surface.default.hex}}) !important;
+  background-image: linear-gradient(transparent, {{colors.on_secondary_fixed.default.hex}}) !important;
 }
 .sunken-menu-item {
-  border-color: {{colors.surface.default.hex}} !important;
+  border-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .sunken-menu-item.selected {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
   border-color: {{colors.surface_container_high.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
@@ -899,7 +899,7 @@ ul.comparison-list {
   background-color: {{colors.error.default.hex}} !important;
 }
 .sunken-menu-separator:before {
-  background-image: linear-gradient(to right, {{colors.surface_container.default.hex}} 70%, {{colors.surface.default.hex}} 100%) !important;
+  background-image: linear-gradient(to right, {{colors.on_primary.default.hex}} 70%, {{colors.on_secondary_fixed.default.hex}} 100%) !important;
 }
 .state {
   color: {{colors.primary_fixed.default.hex}} !important;
@@ -911,19 +911,19 @@ ul.comparison-list {
   background-color: {{colors.tertiary.default.hex}} !important;
 }
 .subnav-item {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .subnav-item:hover {
   background-color: {{colors.surface_container_high.default.hex}} !important;
 }
 .subnav-item:visited {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .subnav-item.selected {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .subnav-links a:hover {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .subnav-search input {
   border-color: {{colors.primary.default.hex}} !important;
@@ -938,21 +938,21 @@ a.tabnav-tab,
 }
 a.tabnav-tab.selected,
 .tabnav-tab.selected {
-  background-color: {{colors.surface.default.hex}} !important;
-  background-image: linear-gradient({{colors.surface_container.default.hex}}, {{colors.surface.default.hex}}) !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
+  background-image: linear-gradient({{colors.on_primary.default.hex}}, {{colors.on_secondary_fixed.default.hex}}) !important;
   border-color: {{colors.primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .table-list tr,
 .table-list li {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .table-list tr:hover,
 .table-list li:hover {
   background-color: {{colors.surface_container_high.default.hex}} !important;
 }
 .table-list-header {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .text-pending {
   color: {{colors.tertiary_container.default.hex}} !important;
@@ -964,28 +964,28 @@ a.tabnav-tab.selected,
   color: {{colors.error.default.hex}} !important;
 }
 .timeline-commits .commit-meta {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .timeline-commits .commit-meta .commit-id {
   color: {{colors.primary.default.hex}} !important;
 }
 .topic-tag.topic-tag-link {
-  background-color: {{colors.surface_container.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .underline-nav-item {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .underline-nav-item.selected {
   border-bottom-color: {{colors.error.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .user-profile-nav {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.primary.default.hex}} !important;
 }
 .user-profile-sticky-bar:after {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.primary.default.hex}} !important;
 }
 .graphs .area {
@@ -998,15 +998,15 @@ a.tabnav-tab.selected,
   background-color: {{colors.surface_container_high.default.hex}} !important;
 }
 .facebox-popup {
-  color: {{colors.on_surface.default.hex}} !important;
-  background-color: {{colors.surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .facebox-popup .octicon {
   color: #fff !important;
 }
 .facebox-popup .owner-select-target {
-  color: {{colors.on_surface.default.hex}} !important;
-  background-color: {{colors.surface_container.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .facebox-popup .owner-select-target:hover {
   background-color: {{colors.primary.default.hex}} !important;
@@ -1018,7 +1018,7 @@ a.tabnav-tab.selected,
   background-color: {{colors.primary.default.hex}} !important;
 }
 .menu {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .menu-item.selected {
   background-color: {{colors.surface_container_high.default.hex}} !important;
@@ -1027,14 +1027,14 @@ a.tabnav-tab.selected,
   background-color: {{colors.primary.default.hex}} !important;
 }
 .Box {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .Box-header {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 svg > * text {
-  color: {{colors.on_surface.default.hex}} !important;
-  fill: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
+  fill: {{colors.secondary_fixed.default.hex}} !important;
 }
 .insertions {
   color: {{colors.tertiary.default.hex}} !important;
@@ -1044,10 +1044,10 @@ svg > * text {
 }
 /* Google */
 .sfbgg {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .sbib_a {
-  background: linear-gradient(to bottom, {{colors.surface_container.default.hex}}, {{colors.surface.default.hex}}) !important;
+  background: linear-gradient(to bottom, {{colors.on_primary.default.hex}}, {{colors.on_secondary_fixed.default.hex}}) !important;
 }
 input#lst-ib,
 #sb_ifc0.sbib_b,
@@ -1056,49 +1056,49 @@ input#lst-ib,
 }
 #lst-ib,
 .sbsb_a {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .kpbb {
   background-image: linear-gradient(to bottom, {{colors.primary.default.hex}}, {{colors.primary_container.default.hex}}) !important;
 }
 #hdtbSum {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 #hdtbMenus.hdtb-td-o {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 #hdtb-tls.hdtb-tl {
-  background-image: linear-gradient(to bottom, {{colors.surface.default.hex}}, {{colors.surface_container.default.hex}}) !important;
+  background-image: linear-gradient(to bottom, {{colors.on_secondary_fixed.default.hex}}, {{colors.on_primary.default.hex}}) !important;
 }
 #hdtb-tls.hdtb-tl.hdtb-tl-sel {
-  background-image: linear-gradient(to bottom, {{colors.surface_container.default.hex}}, {{colors.surface.default.hex}}) !important;
+  background-image: linear-gradient(to bottom, {{colors.on_primary.default.hex}}, {{colors.on_secondary_fixed.default.hex}}) !important;
 }
 #abar_button_opt.ab_button {
-  background: linear-gradient(to bottom, {{colors.surface.default.hex}}, {{colors.surface_container.default.hex}}) !important;
+  background: linear-gradient(to bottom, {{colors.on_secondary_fixed.default.hex}}, {{colors.on_primary.default.hex}}) !important;
 }
 #appbar {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 cite {
   color: {{colors.tertiary.default.hex}} !important;
 }
 .ab_dropdown {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 div.crp {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 #fbar {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 /* Wikipedia */
 #content {
-  background-color: {{colors.surface.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 #mw-head,
 #mw-panel {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 #mw-head div.portal,
@@ -1106,38 +1106,38 @@ div.crp {
   background-image: none !important;
 }
 #mw-head {
-  background-color: {{colors.surface_container.default.hex}} !important;
-  background-image: linear-gradient(to bottom, {{colors.surface.default.hex}}, {{colors.surface_container.default.hex}}) !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
+  background-image: linear-gradient(to bottom, {{colors.on_secondary_fixed.default.hex}}, {{colors.on_primary.default.hex}}) !important;
 }
 #mw-panel,
 #p-logo {
-  background-image: linear-gradient(to right, {{colors.surface.default.hex}}, {{colors.surface_container.default.hex}}) !important;
+  background-image: linear-gradient(to right, {{colors.on_secondary_fixed.default.hex}}, {{colors.on_primary.default.hex}}) !important;
 }
 div.vectorTabs {
-  background-image: linear-gradient(to bottom, {{colors.surface.default.hex}}, {{colors.surface_container.default.hex}}) !important;
+  background-image: linear-gradient(to bottom, {{colors.on_secondary_fixed.default.hex}}, {{colors.on_primary.default.hex}}) !important;
 }
 div.vectorTabs ul {
-  background-image: linear-gradient(to bottom, {{colors.surface.default.hex}}, {{colors.surface_container.default.hex}}) !important;
+  background-image: linear-gradient(to bottom, {{colors.on_secondary_fixed.default.hex}}, {{colors.on_primary.default.hex}}) !important;
 }
 div.vectorTabs ul li {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   background-image: none !important;
   padding: 0px 1px 0px 1px !important;
 }
 div.vectorTabs span {
-  background-color: {{colors.surface_container.default.hex}} !important;
-  background-image: linear-gradient(to bottom, {{colors.surface.default.hex}}, {{colors.surface_container.default.hex}}) !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
+  background-image: linear-gradient(to bottom, {{colors.on_secondary_fixed.default.hex}}, {{colors.on_primary.default.hex}}) !important;
 }
 div.vectorTabs li.selected,
 div.vectorTabs li.selected span {
   background-color: transparent !important;
-  background-image: linear-gradient(to bottom, {{colors.surface_container.default.hex}}, {{colors.surface.default.hex}}) !important;
+  background-image: linear-gradient(to bottom, {{colors.on_primary.default.hex}}, {{colors.on_secondary_fixed.default.hex}}) !important;
 }
 .mw-wiki-logo {
   filter: opacity(50%);
 }
 div#simpleSearch #searchInput {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
   padding: 0.05em 0px 0.2em 0.2em !important;
 }
 .ambox,
@@ -1145,17 +1145,17 @@ div#simpleSearch #searchInput {
 #toc,
 #toctitle,
 .toclevel-1 {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.surface_container_high.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .catlinks {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.surface_container_high.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .navbox {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.surface_container_high.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
@@ -1170,7 +1170,7 @@ th.navbox-group,
   background-color: {{colors.surface_container_high.default.hex}} !important;
 }
 .navbox-even {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 h1,
 h2,
@@ -1187,7 +1187,7 @@ code {
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 div.thumbinner {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border-color: {{colors.surface_container_high.default.hex}} !important;
 }
 img {
@@ -1200,15 +1200,15 @@ img.thumbimage {
   opacity: 0.5 !important;
 }
 table.wikitable {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
   border-color: {{colors.surface_container_high.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 table.wikitable > * > tr > th {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 table {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 /* Hacker News */
 #hnmain > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table,
@@ -1221,13 +1221,13 @@ table {
 }
 #hnmain > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2),
 #hnmain > tbody:nth-child(1) > tr:nth-child(2) {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 #hnmain > tbody:nth-child(1) > tr:nth-child(2) {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .title a {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .title a:visited {
   color: {{colors.primary.default.hex}} !important;
@@ -1240,13 +1240,13 @@ a.storylink {
   color: {{colors.primary.default.hex}} !important;
 }
 #hnmain > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 #hnmain .comhead {
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 #hnmain .c00 {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 #hnmain a.hnuser {
   color: {{colors.tertiary.default.hex}} !important;
@@ -1261,109 +1261,109 @@ a.storylink {
   color: {{colors.tertiary.default.hex}} !important;
 }
 #hnmain > tbody:nth-child(1) > tr:nth-child(4) {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 #hnmain > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1) > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) {
   background-color: {{colors.error.default.hex}} !important;
 }
 /* Reddit */
 #sr-header-area {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 #sr-header-area .srdrop .selected {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 #sr-header-area #sr-more-link {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .link.promotedlink.promoted {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .link .usertext .md {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .linkinfo {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .linklisting .odd {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .thing .title {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 div.md {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 body.comment {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .commentarea > .usertext {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .commentarea .menuarea {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .comments-page .panestack-title {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .listing-chooser {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .listing-chooser .intro {
   background-color: {{colors.primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .listing-chooser .grippy {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .listing-chooser .grippy:after {
   border-right: none !important;
 }
 .listing-chooser li {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .listing-chooser li.selected {
   background-color: {{colors.primary.default.hex}} !important;
   box-shadow: none;
 }
 .listing-chooser li a {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .listing-chooser li a .description {
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .titlebox {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .titlebox form.toggle {
-  background-color: {{colors.surface_container.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .side .usertext-body .md {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .side {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .sidebox .spacer {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .tabmenu li a {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 #header-bottom-right {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .morelink .nub {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 /* StackOverflow */
 tr.Even {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .BigQuote {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.error.default.hex}} !important;
 }
 .Cat1HL {
@@ -1377,7 +1377,7 @@ tr.Even {
   background-color: {{colors.surface_container_high.default.hex}} !important;
 }
 .FeatureByline {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border: none !important;
 }
 .Headline {
@@ -1387,27 +1387,27 @@ tr.Even {
   color: {{colors.tertiary.default.hex}} !important;
 }
 DIV.GAByline {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   border: none !important;
 }
 table.OddEven tr:nth-child(even) {
   background-color: {{colors.surface_container_low.default.hex}} !important;
 }
 table.OddEven tr:nth-child(odd) {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 DIV.CommentBox {
-  border-color: {{colors.surface_container.default.hex}} !important;
+  border-color: {{colors.on_primary.default.hex}} !important;
 }
 DIV.CommentBox P.CommentTitle {
   background-color: {{colors.surface_container_high.default.hex}} !important;
 }
 #menu,
 .topnav-container {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .navmenu ul {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 body * {
   border-color: {{colors.surface_container_high.default.hex}} !important;
@@ -1417,7 +1417,7 @@ body * {
   background-color: {{colors.tertiary.default.hex}} !important;
 }
 .bottom-notice {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .comments-link {
   color: {{colors.tertiary.default.hex}} !important;
@@ -1428,26 +1428,26 @@ body * {
 }
 .page-numbers.current {
   background-color: {{colors.error.default.hex}} !important;
-  color: {{colors.surface.default.hex}} !important;
+  color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .post-menu a {
   color: {{colors.tertiary.default.hex}} !important;
 }
 .question-status {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .bg-black-050 {
   background-color: transparent !important;
 }
 .val-info {
   background-color: transparent !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .s-label {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 pre code {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 pre code .atn {
@@ -1467,7 +1467,7 @@ pre code .lit {
 }
 pre code .pln,
 pre code .pun {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 pre code .str {
   color: {{colors.tertiary_fixed.default.hex}} !important;
@@ -1480,7 +1480,7 @@ pre code .typ {
 }
 #footer {
   background-color: {{colors.surface_container_high.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 #footer #footer-sites th {
   color: {{colors.primary_fixed.default.hex}} !important;
@@ -1497,17 +1497,17 @@ pre code .typ {
 }
 .so-header .navigation .-list .-item :hover {
   background-color: {{colors.tertiary.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .topbar-dialog {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
   box-shadow: {{colors.primary.default.hex}} 5px 5px 5px;
 }
 .topbar-dialog .current-site-container {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .topbar-dialog .header {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .topbar-dialog .header a {
   color: {{colors.primary_fixed.default.hex}} !important;
@@ -1525,7 +1525,7 @@ pre code .typ {
   filter: opacity(75%);
 }
 .new-post-activity {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .tagged-interesting {
   background-color: {{colors.surface_container_high.default.hex}} !important;
@@ -1542,7 +1542,7 @@ div.answered-accepted .mini-counts {
   color: {{colors.tertiary.default.hex}} !important;
 }
 .unanswered .mini-counts span {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 #hot-network-questions a {
   color: {{colors.tertiary_fixed.default.hex}} !important;
@@ -1554,18 +1554,18 @@ div.answered-accepted .mini-counts {
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 #sidebar .module.community-bulletin {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 #sidebar .question-hyperlink {
   color: {{colors.tertiary_fixed.default.hex}} !important;
 }
 .newuser {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .label-key {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .label-key b {
   color: {{colors.primary_fixed.default.hex}} !important;
@@ -1574,32 +1574,32 @@ div.answered-accepted .mini-counts {
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .ad502-room {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   box-shadow: {{colors.primary.default.hex}} 0px 1px 3px;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 #tabs a {
   background-color: transparent !important;
-  background-image: linear-gradient(to bottom, {{colors.surface.default.hex}}, {{colors.surface_container.default.hex}});
+  background-image: linear-gradient(to bottom, {{colors.on_secondary_fixed.default.hex}}, {{colors.on_primary.default.hex}});
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 #tabs a.youarehere {
-  background-image: linear-gradient(to bottom, {{colors.error.default.hex}}, {{colors.surface.default.hex}});
-  color: {{colors.on_surface.default.hex}} !important;
+  background-image: linear-gradient(to bottom, {{colors.error.default.hex}}, {{colors.on_secondary_fixed.default.hex}});
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .post-tag {
   background-color: {{colors.primary.default.hex}} !important;
-  color: {{colors.surface.default.hex}} !important;
+  color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .post-tag::before {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 a.comment-user.owner {
   background-color: {{colors.tertiary.default.hex}} !important;
   color: {{colors.on_surface_variant.default.hex}} !important;
 }
 .post-signature {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .post-signature a {
@@ -1612,7 +1612,7 @@ a.comment-user.owner {
   color: {{colors.primary_fixed.default.hex}} !important;
 }
 .vote {
-  background-color: {{colors.surface_container.default.hex}} !important;
+  background-color: {{colors.on_primary.default.hex}} !important;
 }
 .vote .star-off {
   filter: opacity(75%);
@@ -1626,7 +1626,7 @@ a.comment-user.owner {
 }
 .answer-votes {
   background-color: {{colors.primary.default.hex}} !important;
-  color: {{colors.surface.default.hex}} !important;
+  color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 /* General */
 hr {
@@ -1634,15 +1634,15 @@ hr {
   color: {{colors.surface_container_high.default.hex}} !important;
 }
 #toolMenu li {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .navPanel,
 .navIntraTool {
-  background-color: {{colors.surface.default.hex}} !important;
+  background-color: {{colors.on_secondary_fixed.default.hex}} !important;
 }
 .instruction,
 .sakaiCopyrightInfo {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.secondary_fixed.default.hex}} !important;
 }
 .listHier th {
   background-color: {{colors.surface_container_high.default.hex}} !important;
