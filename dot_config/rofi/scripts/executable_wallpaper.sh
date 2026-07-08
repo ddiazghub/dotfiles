@@ -51,6 +51,6 @@ if [[ -n "$selection" ]]; then
 			notify-send "Wallpaper" "Loading GIF: $filename (this may take a moment...)"
 		fi
 
-		matugen image "$wallpaper" && notify-send "Wallpaper" "Changed to $filename"
+		matugen image "$wallpaper" --source-color-index 0 --type scheme-fidelity && notify-send "Wallpaper" "Changed to $filename"
 	fi
 fi

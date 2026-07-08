@@ -1,0 +1,65 @@
+require('core.pack').add({
+  'https://github.com/folke/lazydev.nvim',
+  'https://github.com/rafamadriz/friendly-snippets',
+  'https://github.com/saghen/blink.lib',
+  'https://github.com/saghen/blink.cmp',
+}, {
+  setup = function()
+    local cmp = require 'blink.cmp'
+    cmp.build():wait(60000)
+
+    cmp.setup {
+      keymap = { preset = 'default' },
+      completion = {
+        accept = { auto_brackets = { enabled = true } },
+        documentation = { auto_show = true },
+        ghost_text = { enabled = true },
+        list = { selection = { preselect = true, auto_insert = false } },
+      },
+      appearance = {
+        use_nvim_cmp_as_default = true,
+        nerd_font_variant = 'mono',
+      },
+      sources = {
+        default = { 'lsp', 'path', 'snippets', 'lazydev' },
+        providers = {
+          lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
+          snippets = {
+            opts = {
+              friendly_snippets = true,
+              extended_filetypes = {
+                markdown = { 'jekyll' },
+                sh = { 'shelldoc' },
+                php = { 'phpdoc' },
+                cpp = { 'unreal' },
+              },
+            },
+          },
+        },
+      },
+      fuzzy = {
+        implementation = 'rust',
+        sorts = {
+          'score',
+          'sort_text',
+          'label',
+        },
+      },
+      signature = {
+        enabled = true,
+        window = {
+          show_documentation = true,
+          direction_priority = { 's', 'n' },
+        },
+        trigger = {
+          enabled = true,
+          show_on_accept = true,
+        },
+      },
+      cmdline = {
+        keymap = { preset = 'inherit' },
+        completion = { menu = { auto_show = true } },
+      },
+    }
+  end,
+})

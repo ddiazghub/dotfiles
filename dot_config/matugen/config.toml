@@ -1,7 +1,8 @@
 [config.wallpaper]
-command = "swww"
-arguments = ["img", "--transition-type", "center"]
 set = true
+command = "awww"
+arguments = ["img", "--transition-type", "center"]
+# command = "plasma-apply-wallpaperimage"
 
 [templates.waybar]
 input_path = "./templates/colors.css"
@@ -63,56 +64,16 @@ post_hook = "chezmoi apply --force && source ~/.config/fish/conf.d/colors.fish"
 # output_path = "~/.local/share/chezmoi/dot_config/gtk-4.0/colors.css"
 # post_hook = "chezmoi apply --force"
 
-[templates.sweet-gtk]
-input_path = "./templates/sweet-colors.sh"
-output_path = "~/.cache/matugen/sweet-colors.sh"
-post_hook = 'chmod +x ~/.cache/matugen/sweet-colors.sh && ~/.cache/matugen/sweet-colors.sh && gsettings set org.gnome.desktop.interface gtk-theme "" && gsettings set org.gnome.desktop.interface gtk-theme Sweet'
-
 # [templates.starship]
 # input_path = "./templates/starship-colors.toml"
 # output_path = "~/.local/share/chezmoi/dot_config/starship.toml"
 
-[templates.vesktop]
-input_path = "./templates/midnight-discord.css"
-output_path = "~/.config/vesktop/themes/midnight-discord.css"
-post_hook = "chezmoi apply --force"
-
-[templates.pywalfox]
-input_path = "./templates/pywalfox-colors.json"
-output_path = "~/.cache/wal/colors.json"
-post_hook = "/home/neoddiaz/.local/bin/pywalfox update"
-
-[templates.firefox-userchrome]
-input_path = "./templates/userChrome.css"
-output_path = "~/.mozilla/firefox/yb3vxdiz.default-release/chrome/userChrome.css"
-post_hook = "cp ~/.mozilla/firefox/yb3vxdiz.default-release/chrome/userChrome.css ~/dev/pywalfox-native/pywalfox/assets/css/userChrome.css; /home/neoddiaz/.local/bin/pywalfox update"
-
-[templates.firefox-usercontent]
-input_path = "./templates/userContent.css"
-output_path = "~/.mozilla/firefox/yb3vxdiz.default-release/chrome/userContent.css"
-post_hook = "cp ~/.mozilla/firefox/yb3vxdiz.default-release/chrome/userContent.css ~/dev/pywalfox-native/pywalfox/assets/css/userContent.css; /home/neoddiaz/.local/bin/pywalfox update"
-
-[templates.firefox-userchrome-work]
-input_path = "./templates/userChrome.css"
-output_path = "~/.mozilla/firefox/x3457jny.Work/chrome/userChrome.css"
-post_hook = "cp ~/.mozilla/firefox/x3457jny.Work/chrome/userChrome.css ~/dev/pywalfox-native/pywalfox/assets/css/userChrome.css; /home/neoddiaz/.local/bin/pywalfox update"
-
-[templates.firefox-usercontent-work]
-input_path = "./templates/userContent.css"
-output_path = "~/.mozilla/firefox/x3457jny.Work/chrome/userContent.css"
-post_hook = "cp ~/.mozilla/firefox/x3457jny.Work/chrome/userContent.css ~/dev/pywalfox-native/pywalfox/assets/css/userContent.css; /home/neoddiaz/.local/bin/pywalfox update"
-
+# [templates.vesktop]
+# input_path = "./templates/midnight-discord.css"
+# output_path = "~/.config/vesktop/themes/midnight-discord.css"
+# post_hook = "chezmoi apply --force"
+#
 [templates.neovim]
 input_path = "./templates/neovim/template.lua"
 output_path = "~/.config/nvim/generated.lua"
 post_hook = "pkill -SIGUSR1 nvim"
-
-[templates.qutebrowser]
-input_path = "./templates/qutebrowser-colors.py"
-output_path = "~/.local/share/chezmoi/dot_config/private_qutebrowser/colors.py"
-post_hook = "chezmoi apply --force && ~/.config/matugen/scripts/qb-reload ':config-source' &"
-
-[templates.qutebrowser-userstyle]
-input_path = "./templates/qutebrowser-userstyle.css"
-output_path = "~/.local/share/chezmoi/dot_config/private_qutebrowser/userstyles/matugen-all-sites.css"
-post_hook = "chezmoi apply --force && ~/.config/matugen/scripts/qb-reload ':set content.user_stylesheets ~/.config/qutebrowser/userstyles/matugen-all-sites.css'"

@@ -1,12 +1,10 @@
-vim.lsp.enable { -- Hyprland
-  'hyprls',
-
+vim.lsp.enable {
   -- Neovim and Lua
   'lua_ls',
   'stylua',
 
   -- TS/JS ecosystem
-  'vtsls',
+  'tsgo',
   'cssls',
   'superhtml',
   'biome',
@@ -34,6 +32,9 @@ vim.lsp.enable { -- Hyprland
 
   -- C/C++
   'qmlls',
+
+  -- Rust
+  'rust_analyzer',
 }
 
 -- Diagnostic Config

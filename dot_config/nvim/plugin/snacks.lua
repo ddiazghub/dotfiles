@@ -1,0 +1,161 @@
+local v = vim.version()
+local version = string.format('  Neovim v%d.%d.%d  (  %s, %s)', v.major, v.minor, v.patch, _VERSION, jit and jit.version or 'Lua')
+
+local header = [[
+███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
+]] .. version
+
+local function set_keys(keys)
+  for _, map in ipairs(keys) do
+    vim.keymap.set(map.mode or 'n', map[1], map[2], { desc = map.desc, silent = true })
+  end
+end
+
+require('core.pack').add({ 'https://github.com/folke/snacks.nvim' }, {
+  setup = function()
+    Snacks.setup {
+      animate = {
+        enabled = true,
+        duration = 10,
+        fps = 60,
+        easing = 'linear',
+      },
+      bigfile = {
+        enabled = true,
+        notify = true,
+        size = 10000 * 1024,
+      },
+      bufdelete = { enabled = true },
+      dashboard = {
+        enabled = true,
+        preset = {
+          header = header,
+          keys = {
+            { icon = ' ', key = 'f', desc = 'Find File', action = ":lua Snacks.dashboard.pick('files')" },
+            { icon = '󱞋 ', key = 'e', desc = 'Explorer', action = ':Oil' },
+            { icon = ' ', key = 'n', desc = 'New File', action = ':ene | startinsert' },
+            { icon = ' ', key = 'g', desc = 'Find Text', action = ":lua Snacks.dashboard.pick('live_grep')" },
+            { icon = ' ', key = 'r', desc = 'Recent Files', action = ":lua Snacks.dashboard.pick('oldfiles')" },
+            { icon = ' ', key = 'c', desc = 'Config', action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
+            { icon = ' ', key = 's', desc = 'Restore Session', section = 'session' },
+            { icon = '󰒲 ', key = 'L', desc = 'Update Packs', action = ':PackUpdate' },
+            { icon = ' ', key = 'M', desc = 'Mason', action = ':Mason' },
+            { icon = ' ', key = 'q', desc = 'Quit', action = ':qa' },
+            { key = '<Esc>', icon = '⤷ ', desc = 'OR', action = ':qa' },
+          },
+        },
+        sections = {
+          { section = 'header' },
+          {
+            pane = 2,
+            section = 'terminal',
+            cmd = 'fish -c "fastfetch -c example21mod.jsonc"',
+            height = 7,
+            width = 100,
+            padding = 1,
+          },
+          { section = 'keys', gap = 1, padding = 1 },
+          { pane = 2, icon = ' ', title = 'Recent Files', section = 'recent_files', indent = 2, padding = 1 },
+          { pane = 2, icon = ' ', title = 'Projects', section = 'projects', indent = 2, padding = 1 },
+          {
+            pane = 2,
+            icon = ' ',
+            title = 'Git Status',
+            section = 'terminal',
+            enabled = function()
+              return Snacks.git.get_root() ~= nil
+            end,
+            cmd = 'git status --short --branch --renames',
+            height = 5,
+            padding = 1,
+            ttl = 5 * 60,
+            indent = 3,
+          },
+          { section = 'startup' },
+        },
+      },
+      dim = {
+        enabled = true,
+        animate = { total = 30 },
+      },
+      gitbrowse = { enabled = true },
+      image = { enabled = true },
+      indent = { enabled = true },
+      input = {
+        enabled = true,
+        win = {
+          relative = 'editor',
+          row = math.floor(vim.o.lines / 2) - 1,
+        },
+      },
+      lazygit = { enabled = true },
+      picker = {
+        enabled = true,
+        exclude = {
+          '.git',
+          'node_modules',
+        },
+        formatters = {
+          file = {
+            filename_first = true,
+          },
+        },
+        previewers = {
+          diff = {
+            style = 'fancy',
+            cmd = { 'delta' },
+          },
+        },
+      },
+      -- notifier = { enabled = true, style = 'fancy' },
+      quickfile = { enabled = true },
+      scratch = { enabled = true },
+      scope = { enabled = true },
+      scroll = {
+        enabled = true,
+        animate = {
+          duration = { total = 70 },
+          fps = 60,
+          easing = 'linear',
+        },
+      },
+      statuscolumn = { enabled = true },
+      toggle = {
+        which_key = true,
+      },
+      words = { enabled = true },
+      zen = { enabled = true },
+    }
+
+    set_keys(require('config.keymaps').snacks.general)
+
+    vim.api.nvim_create_autocmd('User', {
+      pattern = 'VeryLazy',
+      callback = function()
+        -- _G.dd = function(...)
+        --   Snacks.debug.inspect(...)
+        -- end
+        --
+        -- _G.bt = function()
+        --   Snacks.debug.backtrace()
+        -- end
+        --
+        -- if vim.fn.has 'nvim-0.11' == 1 then
+        --   vim._print = function(_, ...)
+        --     dd(...)
+        --   end
+        -- else
+        --   vim.print = _G.dd
+        -- end
+        --
+        require('config.keymaps').snacks.toggle()
+        require('config.autocmds').snacks()
+      end,
+    })
+  end,
+})

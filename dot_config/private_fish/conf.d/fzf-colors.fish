@@ -2,8 +2,8 @@
 # Source this file in your config.fish
 
 set -gx FZF_DEFAULT_OPTS "\
---color=bg:-1,bg+:#9ecafc,fg:#e0e2e8,fg+:#003256 \
---color=hl:#d5bee5,hl+:#003256,info:#bac8db,marker:#d5bee5 \
---color=prompt:#9ecafc,spinner:#d5bee5,pointer:#d5bee5,header:#8c9199 \
---color=border:#9ecafc,label:#e0e2e8,query:#e0e2e8 \
+--color=bg:-1,bg+:#99cbfd,fg:#e1e2e6,fg+:#003353 \
+--color=hl:#f5bd6c,hl+:#003353,info:#b6c8de,marker:#f5bd6c \
+--color=prompt:#99cbfd,spinner:#f5bd6c,pointer:#f5bd6c,header:#8b9199 \
+--color=border:#99cbfd,label:#e1e2e6,query:#e1e2e6 \
 --highlight-line --border=bold --prompt='> ' --pointer='▶' --marker='✓'"

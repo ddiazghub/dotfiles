@@ -84,12 +84,8 @@ local function lsp(buffer, client)
   vim.keymap.set('n', 'grt', Snacks.picker.lsp_type_definitions, { buffer = buffer, desc = 'LSP: [G]oto [T]ype Definition' })
   vim.keymap.set('n', 'g0', Snacks.picker.lsp_symbols, { buffer = buffer, desc = 'LSP: Document Symbols' })
   vim.keymap.set('n', 'grn', function()
-    require('live-rename').rename()
-
-    vim.schedule(function()
-      vim.api.nvim_feedkeys('A', 'n', false)
-    end)
-  end, { buffer = buffer, desc = 'LSP: Rename' })
+    return ':IncRename ' .. vim.fn.expand '<cword>'
+  end, { buffer = buffer, desc = 'LSP: Rename', expr = true })
 
   vim.keymap.set('n', '<leader>lS', Snacks.picker.lsp_workspace_symbols, { buffer = buffer, desc = '[L]SP: Open Workspace Symbols' })
   vim.keymap.set('n', '<leader>lc', Snacks.picker.lsp_incoming_calls, { buffer = buffer, desc = '[L]SP: [C]alls Incoming' })
@@ -477,9 +473,9 @@ local snacks = {
     {
       '<leader>sp',
       function()
-        Snacks.picker.lazy()
+        Snacks.picker.files { cwd = vim.fn.stdpath 'config' .. '/lua/plugin' }
       end,
-      desc = '[S]earch: for [P]lugin Spec',
+      desc = '[S]earch: [P]lugin Files',
     },
     {
       '<leader>sq',

@@ -101,3 +101,7 @@ vim.o.shell = 'fish'
 
 -- LSP
 vim.lsp.inlay_hint.enable(true) -- Enable inlay hints by default
+
+-- Disable NetRW
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1

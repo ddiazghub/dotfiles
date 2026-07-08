@@ -52,17 +52,19 @@ vim.api.nvim_create_autocmd('BufWritePost', {
     local chezmoi_dir = vim.fn.expand '~/.local/share/chezmoi'
     if vim.startswith(vim.fn.getcwd(), chezmoi_dir) then
       vim.system({ 'chezmoi', 'apply', '-v' }, { detach = true }, function(obj)
-        if obj.code ~= 0 then
-          vim.notify('Failed to apply dotfiles, run `chezmoi apply -v` to debug', vim.log.levels.ERROR, { title = 'chezmoi' })
-        elseif obj.stdout ~= '' then
-          vim.notify('Dotfiles config applied', vim.log.levels.INFO, { title = 'chezmoi' })
-          vim.notify('Reloading UI components: Waybar', vim.log.levels.INFO, { title = 'config reload' })
-          vim.system({ 'sh', '-c', 'pkill waybar && niri msg action spawn -- waybar' }, { detach = true }, function(obj)
-            if obj.code ~= 0 then
-              vim.notify('Failed to reload waybar: ' .. obj.stderr, vim.log.levels.ERROR, { title = 'config reload' })
-            end
-          end)
-        end
+        vim.schedule(function()
+          if obj.code ~= 0 then
+            vim.notify('Failed to apply dotfiles, run `chezmoi apply -v` to debug', vim.log.levels.ERROR, { title = 'chezmoi' })
+          elseif obj.stdout ~= '' then
+            vim.notify('Dotfiles config applied', vim.log.levels.INFO, { title = 'chezmoi' })
+            vim.notify('Reloading UI components: Waybar', vim.log.levels.INFO, { title = 'config reload' })
+            vim.system({ 'sh', '-c', 'pkill waybar && niri msg action spawn -- waybar' }, { detach = true }, function(obj)
+              if obj.code ~= 0 then
+                vim.notify('Failed to reload waybar: ' .. obj.stderr, vim.log.levels.ERROR, { title = 'config reload' })
+              end
+            end)
+          end
+        end)
       end)
     end
   end,
