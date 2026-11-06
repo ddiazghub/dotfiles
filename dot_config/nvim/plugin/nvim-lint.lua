@@ -4,7 +4,9 @@ require('core.pack').add({ 'https://github.com/mfussenegger/nvim-lint' }, {
 
     lint.linters_by_ft = {
       dockerfile = { 'hadolint' },
+      go = { 'golangcilint' },
       json = {},
+      lua = { 'selene' },
       markdown = {},
       text = {},
     }

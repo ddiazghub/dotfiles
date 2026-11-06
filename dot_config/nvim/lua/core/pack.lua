@@ -191,17 +191,24 @@ local function schedule_autocmds()
         pat = pattern
       end
 
-      vim.api.nvim_create_autocmd(event, {
-        pattern = pat,
-        once = true,
-        callback = function()
-          install_plugins(group.spec, 'autocmd:' .. event)
+      local function run_group()
+        install_plugins(group.spec, 'autocmd:' .. event)
 
-          for _, setup_function in ipairs(group.setup) do
-            setup_function()
-          end
-        end,
-      })
+        for _, setup_function in ipairs(group.setup) do
+          setup_function()
+        end
+      end
+
+      -- install() runs from vim.schedule, so VimEnter may have already fired
+      if event == 'VimEnter' and vim.v.vim_did_enter == 1 then
+        run_group()
+      else
+        vim.api.nvim_create_autocmd(event, {
+          pattern = pat,
+          once = true,
+          callback = run_group,
+        })
+      end
     end
   end
 end

@@ -3,10 +3,16 @@ require('core.pack').add({
   'https://github.com/rafamadriz/friendly-snippets',
   'https://github.com/saghen/blink.lib',
   'https://github.com/saghen/blink.cmp',
+  { src = 'https://github.com/saghen/blink.pairs', version = vim.version.range '*' },
 }, {
   setup = function()
     local cmp = require 'blink.cmp'
-    cmp.build():wait(60000)
+    local pairs = require 'blink.pairs'
+    local cmpTask = cmp.build()
+    local pairsTask = pairs.download()
+    cmpTask:pwait(60000)
+    pairsTask:pwait(120000)
+    pairs.setup()
 
     cmp.setup {
       keymap = { preset = 'default' },
